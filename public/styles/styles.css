@@ -1,3 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700|Limelight');
+
+* {box-sizing: border-box}
+
+body {
+  font-family: 'Lato', 'Verdana', Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  background-color: #222020;
+}
+
 .list-group-item {
   line-height: 2.5;
 }
