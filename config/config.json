@@ -5,11 +5,11 @@
     "database": "flickspicks",
     "host": "localhost",
     "dialect": "mysql",
-    "port": "3306"
+    "port": 3306
   },
   "test": {
     "username": "root",
-    "password": null,
+    "password": "root",
     "database": "testdb",
     "host": "localhost",
     "dialect": "mysql",
