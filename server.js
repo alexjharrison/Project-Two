@@ -1,4 +1,4 @@
-require("dotenv").config();
+// require("dotenv").config();
 var express = require("express");
 var bodyParser = require("body-parser");
 var exphbs = require("express-handlebars");
@@ -6,7 +6,7 @@ var exphbs = require("express-handlebars");
 var db = require("./models");
 
 var app = express();
-var PORT = process.env.PORT || 3000;
+var PORT = process.env.PORT || 80;
 
 // Middleware
 app.use(bodyParser.urlencoded({ extended: false }));
