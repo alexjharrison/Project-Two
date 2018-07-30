@@ -1,5 +1,7 @@
-DROP DATABASE IF EXISTS exampledb;
-CREATE DATABASE exampledb;
+DROP DATABASE IF EXISTS flickspicks;
+<<<<<<< HEAD
+CREATE DATABASE flickspicks;
+=======
+CREATE DATABASE flickspicks;
 
-DROP DATABASE IF EXISTS testdb;
-CREATE DATABASE testdb;
+>>>>>>> 427421917f5313368a64ddd7d6aea7a669070a73
