@@ -4,7 +4,7 @@
 
 body {
   font-family: 'Lato', 'Verdana', Helvetica, Arial, sans-serif;
-  color: lightgrey;
+  color: #fff;
   font-size: 18px;
   background-color: #222020;
 }
@@ -23,15 +23,10 @@ h2 {
   letter-spacing: 2px;
 }
 
-img {
-  max-width: 100%;
-}
-
 header {
   height: 50px;
   text-align: left;
   margin-bottom: 15px;
-  max-width: 960px;
 }
 
 header h1 {
@@ -39,63 +34,17 @@ header h1 {
   font-size: 2.2em;
 }
 
-.fp-container {
+.container {
   max-width: 960px;
   margin: 0 auto;
   text-align: center;
 }
 
 .top-content {
-  width: 100%;
+  width: 750px;
   margin: auto;
-  display: flex;
   min-height: 400px;
   position: relative;
-}
-
-.top-content .left {
-  max-width: 750px;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.top-content .right {
-  width: 100%;
-  max-width: 210px;
-  text-align: center;
-  height: auto;
-}
-
-.pick-showtime { 
-  color: lightgray;
-  background-color: rgba(128, 128, 128, 0.2);
-  width: 100%;
-  padding: 12px;
-}
-#pick-time {
-  color: #fff;
-  font-size: 1.8em;
-  padding: 5px;
-}
-#pick-place {
-  color: #fff;
-  font-size: 1.25em;
-  padding: 5px;
-}
-
-.pick-RT {
-  width: 100%;
-  height: auto;
-  background-color: rgba(194, 41, 41, 0.3);
-  padding: 8px;
-}
-.pick-critic-box,
-.pick-audience-box{
-  padding-bottom: 8px;
-}
-#pick-critic-score,
-#pick-audience-score {
-  font-size: 1.8em;
 }
 
 .top-content .caption {
@@ -109,15 +58,14 @@ header h1 {
   width: 100%;
   height: 400px;
   background-color: #000;
-  background-image: url("../images/placeholder.jpg");
+  background-image: url("./placeholder.jpg");
   background-size: cover;
   position: relative;
 }
 
-.pick-title {
+.pix-title {
   font-size: 30px;
   color: #fff;
-  font-weight: bold;
   text-shadow: 1px 1px 8px rgba(0, 0, 0, 1), 2px 2px 0px rgba(0, 0, 0, 1), -2px 2px 0px rgba(0, 0, 0, 1);
   position: absolute;
   top: 5px;
@@ -125,8 +73,7 @@ header h1 {
   letter-spacing: 1px;
 }
 
-.pick-genres {
-  width: 100%;
+.pix-genres {
   color: #000;
   font-size: 15px;
   font-style: italic;
@@ -143,27 +90,27 @@ header h1 {
   padding-left: 10px;
 }
 
-.pick-route {
+.pix-route {
   text-align: right;
   font-style: italic;
   font-size: 1.2em;
   padding: 5px 25px;
 }
 
-.pick-route, .pick-route a {
+.pix-route, .pix-route a {
   color: rgb(28, 187, 255);
 }
-.pick-route:hover, .pick-route a:hover {
+.pix-route:hover, .pix-route a:hover {
   color: rgb(116, 202, 255);
   text-shadow: 0px 0px 2px rgba(116, 202, 255, 1);
 }
 
-.pick-rating {
+.rating {
   position: absolute;
-  font-family: 'Lato';
+  font-family: Impact;
   letter-spacing: 1px;
   font-size: 30px;
-  font-weight: bold;
+  font-weight: lighter;
   color: #fff;
   background-color: #000;
   height: 70px;

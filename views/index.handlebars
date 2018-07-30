@@ -1,31 +1,58 @@
-<div id="home">
-  <div class="container">
-    <div class="row">
-      <div class="col-8 offset-2">
-        <h1>{{msg}}</h1>
-        <h2>This is our Home Page!</h2>
-        <form class="clearfix mb-4" action="POST">
-          <div class="form-group">
-            <label for="example-text">Example Text</label>
-            <input type="text" id="example-text" class="form-control" aria-describedby="example-text" placeholder="Enter Example Text">
-          </div>
-          <div class="form-group">
-            <label for="example-description">Example Description</label>
-            <textarea class="form-control" id="example-description" aria-describedby="example-description" placeholder="Enter Example Description"></textarea>
-          </div>
-          <button id="submit" class="btn btn-primary float-right">Submit</button>
-        </form>
-        <h3>Examples:</h3>
-        <ul id="example-list" class="list-group">
-          {{#each examples}}
-          <li data-id="{{this.id}}" class="list-group-item">
-            <a href="example/{{this.id}}">{{this.text}}</a>
-            <button class="btn btn-danger float-right delete">ｘ</button>
-          </li>
-          {{/each}}
-        </ul>
+<div class="fp-container">
+  <div class="top-content">
+    <div class="left">
+      <div class="screen">
+        <div class="pick-title">The Incredibles 2</div>
+        <div class="pick-rating">PG</div>
+      </div>
+      <div class="pick-genres">
+        <span class="genre-tab">Genres:</span>
+        <span class="genre-list">Action &amp; Adventure, Animation, Kids &amp; Family</span>
+      </div>
+      <div class="caption">
+        <p>
+          <b>Synopsis:</b>
+          <span id="pick-synopsis">Everyone's favorite family of superheroes is back in "Incredibles 2"--but this time Helen (voice of Holly Hunter)
+            is in the spotlight, leaving...</span>
+        </p>
       </div>
     </div>
+    <div class="right">
+      <div class="pick-showtime">
+        Next showtime:
+        <div id="pick-time">7:45</div>
+        at
+        <div id="pick-place">Rutgers Coding Bootcamp Cinema</div>
+        <span class="pick-route">Get route
+          <i class="fas fa-location-arrow" style="font-size: .8em;"></i>
+        </span>
+      </div>
+      <div class="pick-RT">
+        <div class="RT-logo">
+          <a href="https://rottentomatoes.com">
+            <img src="../images/RottenTomatoesLogo.png" style="width: 90%; padding: 8px">
+          </a>
+        </div>
+        <div class="pick-critic-box">
+          <div id="pick-critic-score">
+            93%
+          </div>
+          critic score
+        </div>
+        <div class="pick-audience-box">
+          <div id="pick-audience-score">
+            85%
+          </div>
+          audience score
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+  <div class="more">
+    <h2>More Flicks...</h2>
   </div>
 </div>
 
