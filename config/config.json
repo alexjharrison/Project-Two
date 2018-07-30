@@ -2,14 +2,10 @@
   "development": {
     "username": "root",
     "password": "root",
-<<<<<<< HEAD
-    "database": "exampledb",
-=======
     "database": "flickspicks",
->>>>>>> 427421917f5313368a64ddd7d6aea7a669070a73
     "host": "localhost",
     "dialect": "mysql",
-    "port": 3306
+    "port": "3306"
   },
   "test": {
     "username": "root",
