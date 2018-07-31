@@ -66,18 +66,21 @@ header h1 {
   justify-content: flex-end;
 }
 
-button.pick-settings {
+a.pick-settings {
   font-weight: bold;
   color: #222;
-  border-radius: 6px;
-  background-color: #005285;
+  border-radius: 4px;
+  background-color: #005e99;
   border: none;
   height: 45px;
   padding: 5px 10px;
   margin: 0 12px;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
 }
 
-button.pick-settings:hover{
+a.pick-settings:hover{
   background-color: rgb(80, 188, 255);
   box-shadow: 0px 0px 2px rgba(116, 202, 255, 1);
 }
@@ -226,6 +229,26 @@ div.card-action a:hover {
   justify-content: center;
 }
 
+.pick-form-btn {
+  font-weight: bold;
+  width: auto;
+  color: #fff;
+  border-radius: 4px;
+  background-color: #a50000;
+  border: none;
+  height: 45px;
+  padding: 5px 14px;
+  margin: 0 12px;
+  display: inline-flex;
+  align-items: center;
+  text-transform: uppercase;
+}
+.pick-form-btn:hover {
+  background-color: #e75009;
+  -webkit-box-shadow: 0 1px 0 0 #e75009;
+  box-shadow: 0 1px 0 0 #e75009;
+}
+
 .more {
   border-top: 8px #ffc400 solid;
   background: rgb(89,0,14); /* Old browsers */
@@ -252,6 +275,9 @@ footer {
   display: none;
 }
 
+
+/* materialize edits */
+
 .card {
   color: #333;
   font-size: .8em;
@@ -264,6 +290,57 @@ footer {
 .card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating):hover {
   color: rgb(116, 202, 255);
   text-shadow: none;
+}
+
+.modal-content {
+  overflow: visible;
+}
+
+
+.input-field label {
+  font-style: italic;
+}
+
+input:not([type]):focus:not([readonly]), 
+input[type=text]:not(.browser-default):focus:not([readonly]), 
+input[type=password]:not(.browser-default):focus:not([readonly]), 
+input[type=email]:not(.browser-default):focus:not([readonly]), 
+input[type=url]:not(.browser-default):focus:not([readonly]), 
+input[type=time]:not(.browser-default):focus:not([readonly]), 
+input[type=date]:not(.browser-default):focus:not([readonly]), 
+input[type=datetime]:not(.browser-default):focus:not([readonly]), 
+input[type=datetime-local]:not(.browser-default):focus:not([readonly]), 
+input[type=tel]:not(.browser-default):focus:not([readonly]), 
+input[type=number]:not(.browser-default):focus:not([readonly]), 
+input[type=search]:not(.browser-default):focus:not([readonly]), 
+textarea.materialize-textarea:focus:not([readonly]),
+.select-wrapper input.select-dropdown:focus {
+  border-bottom: 1px solid #a50000;
+  -webkit-box-shadow: 0 1px 0 0 #a50000;
+  box-shadow: 0 1px 0 0 #a50000;
+}
+
+.input-field .prefix.active,
+.input-field .prefix label.active,
+input:not([type]):focus:not([readonly])+label, 
+input[type=text]:not(.browser-default):focus:not([readonly])+label, 
+input[type=password]:not(.browser-default):focus:not([readonly])+label, 
+input[type=email]:not(.browser-default):focus:not([readonly])+label, 
+input[type=url]:not(.browser-default):focus:not([readonly])+label, 
+input[type=time]:not(.browser-default):focus:not([readonly])+label, 
+input[type=date]:not(.browser-default):focus:not([readonly])+label, 
+input[type=datetime]:not(.browser-default):focus:not([readonly])+label, 
+input[type=datetime-local]:not(.browser-default):focus:not([readonly])+label, 
+input[type=tel]:not(.browser-default):focus:not([readonly])+label, 
+input[type=number]:not(.browser-default):focus:not([readonly])+label, 
+input[type=search]:not(.browser-default):focus:not([readonly])+label, 
+textarea.materialize-textarea:focus:not([readonly])+label {
+  color: #a50000;
+}
+
+[type="checkbox"]:checked+span:not(.lever):before {
+  border-bottom-color: #a50000;
+  border-right-color: #a50000;
 }
 
 
