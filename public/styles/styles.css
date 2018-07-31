@@ -21,6 +21,7 @@ h2 {
   text-shadow: 1px 1px 8px rgba(0, 0, 0, 1), 2px 2px 0px rgba(0, 0, 0, 1), -2px 2px 0px rgba(0, 0, 0, 1);
   font-style: italic;
   letter-spacing: 2px;
+  margin: 8px 5px 15px;
 }
 
 img {
@@ -198,10 +199,12 @@ button.pick-settings:hover{
   padding: 5px 25px;
 }
 
-.pick-route, .pick-route a {
+.pick-route, .pick-route a,
+div.card-action a {
   color: rgb(28, 187, 255);
 }
-.pick-route:hover, .pick-route a:hover {
+.pick-route:hover, .pick-route a:hover,
+div.card-action a:hover {
   color: rgb(116, 202, 255);
   text-shadow: 0px 0px 2px rgba(116, 202, 255, 1);
 }
@@ -224,7 +227,6 @@ button.pick-settings:hover{
 }
 
 .more {
-  display: flex;
   border-top: 8px #ffc400 solid;
   background: rgb(89,0,14); /* Old browsers */
   background: -moz-linear-gradient(top, rgba(89,0,14,1) 0%, rgba(109,0,25,1) 16%, rgba(143,2,34,1) 100%); /* FF3.6-15 */
@@ -237,6 +239,10 @@ border-radius: 0 0 12px 12px;
 min-height: 100px;
 }
 
+.more .content {
+  display: flex;
+}
+
 footer {
   font-size: .8em;
   margin: 10px;
@@ -245,6 +251,22 @@ footer {
 .mobile-only {
   display: none;
 }
+
+.card {
+  color: #333;
+  font-size: .8em;
+}
+
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating) {
+  color: rgb(0, 152, 218);
+}
+
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating):hover {
+  color: rgb(116, 202, 255);
+  text-shadow: none;
+}
+
+
 
 @media screen and (max-width: 600px) {
   header h1 {

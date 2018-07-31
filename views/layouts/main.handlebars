@@ -3,11 +3,12 @@
 
 <head>
   <meta charset="utf-8">
-      <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+    crossorigin="anonymous">
   <link rel="stylesheet" href="/styles/styles.css" media="screen" title="no title" charset="utf-8">
 
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -23,5 +24,69 @@
   {{{body}}}
 </body>
 
+<a href="#terms" class="btn orange modal-trigger">Edit Search</a>
+<div class="modal" id="terms">
+  <div class="modal-content">
+    <h4>Input Form</h4>
+    <div class="row">
+      <form class="col s12">
+        <div class="row">
+          <div class="input-field col s6" id="location">
+            <i class="material-icons prefix">home</i>
+            <input id="icon_prefix" type="text" class="validate">
+            <label for="icon_prefix">Location</label>
+          </div>
+          <div class="input-field col s6" id="rottenTomatoes">
+            <i class="material-icons prefix">theaters</i>
+            <input id="icon_telephone" type="text" class="validate">
+            <label for="icon_telephone">Rotten Tomatoes Minimum Score</label>
+          </div>
+        </div>
+      </form>
+      <form class="col s12">
+        <div class="row">
+          <div class="input-field col s6" id="waitTime">
+            <i class="material-icons prefix">access_time</i>
+            <input id="icon_prefix" type="text" class="validate">
+            <label for="icon_prefix">Max Weight Time</label>
+          </div>
+          <div class="input-field col s12" id="genre">
+            <select multiple>
+              <option value="" disabled>Choose your option</option>
+              <option value="1">Action</option>
+              <option value="2">Adventure</option>
+              <option value="3">Comedy</option>
+              <option value="4">Crime and Gangster</option>
+              <option value="5">Drama</option>
+              <option value="6">Epics/Historical</option>
+              <option value="7">Horror</option>
+              <option value="8">Musicals</option>
+              <option value="9">Science Fiction</option>
+              <option value="10">War</option>
+              <option value="11">Westerns</option>
+            </select>
+            <label>Materialize Multiple Select</label>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <a href="" class="modal-close btn red">Submit</a>
+  </div>
+</div>
+
+<script>
+  // modal
+  $(document).ready(function () {
+    $('.modal').modal();
+  })
+  // multiple select form
+  $(document).ready(function () {
+    $('select').formSelect();
+  });
+</script>
+
 <footer class="fp-container">&copy; Alexander Harrison, Alyssa Alecci, Dan Vickey, Ray Kilburg</footer>
+
 </html>
