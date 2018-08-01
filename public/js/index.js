@@ -15,17 +15,6 @@ Route finder
 */
 
 
-var title = "space+jam";
-var queryURL = "https://www.omdbapi.com/?t=" + title + "&y=&plot=short&apikey=trilogy";
-
-// $.ajax({
-//   url: queryURL,
-//   method: "POST",
-//   data: data
-// }).then(function(response){
-//   var results = response.data;
-// })
-
 var info = {
     location: "123 Fake Street, Willingboro, NJ",
     minRT: 60, //minimum percent score from rotten tomatoes
