@@ -20,5 +20,22 @@ body {
     height: 6px;
 
   }
+  #modalTitle{
+    text-align: center;
+  }
+
+  #location{
+    text-align: center;
+  }
+  #rtTitle {
+    margin: auto;
+    text-align: center;
+  }
+
+  #select {
+    margin: auto;
+    text-align: left;
+  
+  }
 
  
