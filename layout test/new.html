@@ -228,7 +228,7 @@
                                     <option value="10">War</option>
                                     <option value="11">Westerns</option>
                                 </select>
-                                <label>Materialize Multiple Select</label>
+                                <label>Movie Genere's</label>
                             </div>
                         </div>
                     </form>
@@ -306,5 +306,24 @@
      $(document).ready(function () {
             $('select').formSelect();
         });
+
+            // constructing a queryURL variable we will use instead of the literal string inside of the ajax method
+    var title = "space+jam";
+    var queryURL = "https://www.omdbapi.com/?t=" + title + "&y=&plot=short&apikey=trilogy";
+
+  //ajax call 
+    $.ajax({
+      url: queryURL,
+      method: "GET"
+    }).then(function(response) {
+      console.log(response);
+      console.log(response.Title);
+      console.log(response.imdbRating);
+      console.log(response.Genre);
+      console.log(response.Runtime);
+      console.log(response.Awards)
+      console.log(response.Director)
+      console.log(response.Released)
+    });
 
 </script>
