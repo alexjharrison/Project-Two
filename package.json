@@ -17,7 +17,11 @@
     "express-handlebars": "^3.0.0",
     "moment": "^2.22.2",
     "mysql2": "^1.5.3",
+<<<<<<< HEAD
     "request": "^2.87.0",
+=======
+    "nouislider": "^11.1.0",
+>>>>>>> 4461aac959f8f138c3458c648d17449123036cf1
     "sequelize": "^4.38.0"
   },
   "devDependencies": {
