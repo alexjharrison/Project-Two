@@ -9,7 +9,8 @@ var postRequest = {
         "adventure",
         "musical"
     ],
-    maxRating = "R"  //not to include this rating or above
+    maxRating = "R",  //not to include this rating or above
+    maxDistance = 5  //max distance in miles to theater
 }
 
 //
