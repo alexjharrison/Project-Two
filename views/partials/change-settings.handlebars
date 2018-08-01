@@ -4,48 +4,94 @@
     <a href="#terms" id="modalButton" class="pick-settings modal-trigger">Change Settings</a>
     <div class="modal" id="terms">
         <div class="modal-content">
-            <h4><i>My Pick Settings</i></h4>
+            <h4 id="modalTitle">Your Pick Settings</h4>
             <div class="row">
-                <form class="col s12">
-                    <div class="row">
-                        <div class="input-field col s6" id="location">
-                            <i class="material-icons prefix">home</i>
-                            <input id="icon_prefix" type="text" class="validate">
-                            <label for="icon_prefix">Location</label>
+                <div class="container">
+                    <!-- LOCATION -->
+                    <form class="col s12">
+                        <div class="row">
+                            <div class="input-field col s6" id="location">
+                                <i class="material-icons prefix">home</i>
+                                <input id="icon_prefix" type="text" class="validate">
+                                <label for="icon_prefix">Location</label>
+                            </div>
                         </div>
-                        <div class="input-field col s6" id="rottenTomatoes">
-                            <i class="material-icons prefix">theaters</i>
-                            <input id="icon_telephone" type="text" class="validate">
-                            <label for="icon_telephone">Rotten Tomatoes Minimum Score</label>
+                    </form>
+                    <!-- ROTTEN TOMATOES SLIDER -->
+                    <form action="#">
+                        <h5>Rotten Tomatoes Score (Minimum Percentage)</h5>
+                        <i class="material-icons prefix">theaters</i>
+                        <p class="range-field">
+                            <input type="range" id="test5" min="0" max="100" />
+                        </p>
+                    </form>
+                    <!-- WAIT TIME SLIDER -->
+                    <form action="#">
+                        <h5>Wait Time</h5>
+                        <i class="material-icons prefix">access_time</i>
+                        <p class="range-field">
+                            <input type="range" id="test5" min="0" max="100" />
+                        </p>
+                    </form>
+
+                    <!-- RATING RADIO BUTTONS -->
+                    <form class="col s12">
+                        <div class="row">
+                            <div class="input-field col s6" id="rottenTomatoes">
+                                <form action="#">
+                                    <h5 id="rtTitle">Movie Rating (Maximum)</h5>
+                                    <p>
+                                        <label>
+                                            <input class="with-gap" id="select" name="group1" type="radio" checked />
+                                            <span>G</span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input class="with-gap" id="select" name="group1" type="radio" />
+                                            <span>PG</span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input class="with-gap" id="select" name="group1" type="radio" />
+                                            <span>PG-13</span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input class="with-gap" id="select" name="group1" type="radio" />
+                                            <span>R</span>
+                                        </label>
+                                    </p>
+                                </form>
+                            </div>
                         </div>
-                    </div>
-                </form>
-                <form class="col s12">
-                    <div class="row">
-                        <div class="input-field col s6" id="waitTime">
-                            <i class="material-icons prefix">access_time</i>
-                            <input id="icon_prefix" type="text" class="validate">
-                            <label for="icon_prefix">Max Wait Time</label>
+                    </form>
+                    <form class="col s12">
+                        <div class="row">
+                            <div class="input-field col s12" id="genre">
+                                <select multiple>
+                                    <option value="" disabled>Choose your genres</option>
+                                    <option value="1">Action</option>
+                                    <option value="2">Adventure</option>
+                                    <option value="3">Comedy</option>
+                                    <option value="4">Crime and Gangster</option>
+                                    <option value="5">Drama</option>
+                                    <option value="6">Epics/Historical</option>
+                                    <option value="7">Horror</option>
+                                    <option value="8">Musicals</option>
+                                    <option value="9">Science Fiction</option>
+                                    <option value="10">War</option>
+                                    <option value="11">Westerns</option>
+                                </select>
+                                <label>Genres</label>
+                            </div>
+
                         </div>
-                        <div class="input-field col s12" id="genre">
-                            <select multiple>
-                                <option value="" disabled>Choose your favorite genres</option>
-                                <option value="1">Action</option>
-                                <option value="2">Adventure</option>
-                                <option value="3">Comedy</option>
-                                <option value="4">Crime and Gangster</option>
-                                <option value="5">Drama</option>
-                                <option value="6">Epics/Historical</option>
-                                <option value="7">Horror</option>
-                                <option value="8">Musicals</option>
-                                <option value="9">Science Fiction</option>
-                                <option value="10">War</option>
-                                <option value="11">Westerns</option>
-                            </select>
-                            <label>Genres</label>
-                        </div>
-                    </div>
-                </form>
+                    </form>
+
+                </div>
             </div>
         </div>
         <div class="modal-footer">
