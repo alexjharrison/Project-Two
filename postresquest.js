@@ -9,11 +9,12 @@ var postRequest = {
         "adventure",
         "musical"
     ],
-    maxRating = "R"  //not to include this rating or above
+    maxRating = "R",  //not to include this rating or above
+    maxDistance = 5  //max distance in miles to theater
 }
 
 //
-var postResponse = {[
+var postResponse = [
     {
         name: "best movie name",
         rating: "R",
@@ -94,4 +95,4 @@ var postResponse = {[
         miles2Theater: 5,  //miles to drive to theater
         gMapsLink: "http://maps.google.com/??"
     }
-]}
+]
