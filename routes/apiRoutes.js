@@ -5,16 +5,19 @@ var request = require("request");
 var fs = require("fs");
 
 module.exports = function (app) {
-
-  // Create a new example
+  var iShowtimesData;
+  
   app.post("/", function (req, res) {
-    db.Example.create(req.body).then(function (dbExample) {
-      res.json(dbExample);
-    });
+    // db.User.create(req.body).then(function (userdb) {
+    //   res.json(userdb);
+    // });
+    console.log(req.body);
+    ishowtimesApiCall();
+
+    res.json(iShowtimesData);
   });
 
-  (function ishowtimesApiCall() {
-    console.log("hi");
+  function ishowtimesApiCall(location) {
     request.get({
       url: `https://api.internationalshowtimes.com/v4/showtimes/?location=40.5431598,-74.36320490000003&distance=10&all_fields=true&append=movies,cinemas`,
       headers: { 'X-API-Key': process.env.ISHOWTIMES_KEY }
@@ -32,7 +35,7 @@ module.exports = function (app) {
         }
       })
       showtimes = showtimes.filter(time => time.start_at.includes("2018-07-31") && (time.start_at > timeNow));
-      formattedShowtimes = showtimes.map(time => {
+      iShowtimesData = showtimes.map(time => {
         var movieLocation, cinemaLocation;
         for (var i = 0; i < movieList.length; i++) {
           if (movieList[i].id === time.movie_id) movieLocation = i;
@@ -41,26 +44,18 @@ module.exports = function (app) {
           if (cinemas[i].id === time.cinema_id) cinemaLocation = i;
         }
         return {
-          // minutes_until_show: moment.duration((time.start_at).diff(timeNow)),
           showtime_utc: time.start_at,
           showtime_en: moment(time.start_at).tz("America/New_York").format("hh:mm a"),
           booking_link: time.booking_link,
           movie_name: movieList[movieLocation].title,
           cinema_name: cinemas[cinemaLocation].name,
           address: cinemas[cinemaLocation].location.address.display_text,
-          lattitude: cinemas[cinemaLocation].location.lat,
-          longitude: cinemas[cinemaLocation].location.lon,
+          gmaps: "https://www.google.com/maps/dir/?api=1&origin=40.5431598%2C-74.36320490000003&destination="+cinemas[cinemaLocation].location.address.display_text.replace(/ /g,"+").replace(/,/g,"%2C")
         }
       })
-      console.log(formattedShowtimes);
-      fs.writeFile("./showtimes.json", JSON.stringify(cinemas[0].location.address), function () { })
-      function returnMovie(id, movieList) {
-        for (var i = 0; i < movieList.length; i++) {
-          if (movieList[i].id === id) return i;
-        }
-      }
+      console.log(iShowtimesData);
     });
-  })();
+  }
 
 
 };

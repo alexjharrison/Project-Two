@@ -13,4 +13,9 @@ poster https://stackoverflow.com/questions/253689/switching-a-div-background-ima
 RT url  https://stackoverflow.com/questions/179713/how-to-change-the-href-for-a-hyperlink-using-jquery
 Route finder
 */
-
+$(document).ready(()=>{
+    $.post("/",{name:"name"},function(data){
+        console.log(data);
+    })
+})
+    
