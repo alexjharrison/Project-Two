@@ -377,6 +377,21 @@ textarea.materialize-textarea:focus:not([readonly])+label {
   border-right-color: #a50000;
 }
 
+.range-field {
+  color: #a50000;
+}
+input[type=range]+.thumb,
+[type="radio"]:checked+span:after, 
+[type="radio"].with-gap:checked+span:after {
+  background-color: #a50000;
+}
+
+[type="radio"]:checked+span:after, 
+[type="radio"].with-gap:checked+span:before, 
+[type="radio"].with-gap:checked+span:after {
+  border-color: #a50000;
+}
+
 
 
 @media screen and (max-width: 600px) {
