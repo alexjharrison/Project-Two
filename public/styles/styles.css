@@ -53,7 +53,16 @@ header {
 header h1 {
   color: #ffc400;
   font-size: 2.2em;
-  margin: 10px;
+  margin: 10px auto 0;
+
+}
+
+.tagline {
+  color: rgb(150, 150, 150);
+  font-style: italic;
+  margin-top: -10px;
+  padding-left: 70px;
+  white-space: nowrap;
 }
 
 .fp-container {
@@ -66,7 +75,7 @@ header h1 {
 }
 
 .button-box {
-  color: grey;
+  color: rgb(150, 150, 150);
   font-size: .8em;
   display: flex;
   margin: 12px 12px 0;
@@ -201,6 +210,8 @@ a.pick-settings:hover{
 .pick-genres {
   width: 100%;
   height: auto;
+  display: flex;
+  justify-content: flex-start;
   color: #000;
   font-size: 15px;
   font-style: italic;
@@ -209,8 +220,13 @@ a.pick-settings:hover{
   overflow: hidden;
 }
 .genre-tab {
+  font-weight: bold;
   background-color: rgb(0, 92, 148);
   padding: 5px 10px 5px 20px;
+  height: 100%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
 }
 #pick-genre-list {
   padding-left: 10px;
@@ -317,6 +333,16 @@ footer {
   font-size: .8em;
 }
 
+.card-image {
+  background-image: url("../images/card-loading.gif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 22%;
+  padding-top: 60%;
+}
+
 .card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating) {
   color: rgb(0, 152, 218);
 }
@@ -398,7 +424,6 @@ input[type=range]+.thumb,
   header h1 {
     text-align: center;
     padding-left: 0;
-    margin: 10px;
   }
   header,
   .top-content {
@@ -413,6 +438,11 @@ input[type=range]+.thumb,
     text-align: center;
     width: 100%;
     justify-content: center;
+    align-items: center;
+  }
+
+  .button-box p {
+    margin: 0;
   }
 
   .top-content .right {
@@ -430,12 +460,8 @@ input[type=range]+.thumb,
     width: 100%;
     padding-bottom: 75%;
   }
-  .pick-genres {
-    padding: 5px 10px;
-  }
   .genre-tab {
-    font-weight: bold;
-    display: block;
+    padding: 5px 10px;
   }
   .top-content .caption {
     background-color: transparent;
