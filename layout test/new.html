@@ -23,33 +23,33 @@
 <body>
     <!-- nav bar -->
     <div class="navbar-fixed">
-    <nav class="nav-wraper red">
-        <div class="container">
-            <a href="#" class="brand-logo">Flix Pix</a>
-            <a href="#" class="sidenav-trigger" data-target="mobile-links">
-                <i class="material-icons">menu</i>
-            </a>
-            <ul class="right hide-on-me-and-down">
-                <li>
-                    <a href="#">Home</a>
-                </li>
-                <li>
-                    <a href="#">About</a>
-                </li>
-                <li>
-                    <a href="#">Contact</a>
-                </li>
-                <li>
-                    <a href="#" class="btn-floating yellow darken-4 z-depth-0">
-                        <i class="material-icons">theaters</i>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-</div>
+        <nav class="nav-wraper red">
+            <div class="container">
+                <a href="#" class="brand-logo">Flix Pix</a>
+                <a href="#" class="sidenav-trigger" data-target="mobile-links">
+                    <i class="material-icons">menu</i>
+                </a>
+                <ul class="right hide-on-me-and-down">
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                    <li>
+                        <a href="#" class="btn-floating yellow darken-4 z-depth-0">
+                            <i class="material-icons">theaters</i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
     <div class="navbar-fixed">
-    <nav class="nav-wraper yellow darken-4 z-depth-0" id="nav2">
+        <nav class="nav-wraper yellow darken-4 z-depth-0" id="nav2">
             <div class="container">
             </div>
         </nav>
@@ -72,32 +72,35 @@
 
     <div class="container">
 
-    <!-- carosel -->
-    <h4>Carosel</h4>
-    <div class="carousel carousel-slider center">
-        <div class="carousel-fixed-item center">
+        <!-- carosel -->
+        <h4>Carosel</h4>
+        <div class="carousel carousel-slider center">
+            <div class="carousel-fixed-item center">
+            </div>
+            <div class="carousel-item red white-text" href="#one!">
+                <img src="https://www.geekinsider.com/wp-content/uploads/2018/04/maxresdefault-1.jpg" class="responsive-img" alt="">
+                <h2>First Panel</h2>
+                <p class="white-text">This is your first panel</p>
+            </div>
+            <div class="carousel-item grey white-text" href="#two!">
+                <h2>Movie Title</h2>
+                <p class="white-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus vero ullam labore, voluptates doloribus,
+                    in maxime, esse animi error officiis quibusdam iure. Odio explicabo veniam assumenda architecto nisi
+                    asperiores laboriosam.</p>
+            </div>
         </div>
-        <div class="carousel-item red white-text" href="#one!">
-            <img src="https://www.geekinsider.com/wp-content/uploads/2018/04/maxresdefault-1.jpg" alt="">
-            <h2>First Panel</h2>
-            <p class="white-text">This is your first panel</p>
-        </div>
-        <div class="carousel-item grey white-text" href="#two!">
-            <h2>Movie Title</h2>
-            <p class="white-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus vero ullam labore, voluptates doloribus, in maxime, esse animi error officiis quibusdam iure. Odio explicabo veniam assumenda architecto nisi asperiores laboriosam.</p>
-        </div>
-    </div>
 
-    <!-- cards -->
-    <h4>Cards</h4>
-    <h4>Other Movies You Might Like</h4>
+
+
+        <!-- cards -->
+        <h4>Cards</h4>
+        <h4>Other Movies You Might Like</h4>
         <!-- card1 -->
         <div class="row">
             <div class="col s12 l6">
                 <div class="card" id="cards">
                     <div class="card-image">
-                        <img src="placeholder.jpg"
-                            alt="">
+                        <img src="placeholder.jpg" alt="">
                         <a href="#" class="halfway-fab btn-floating pink pulse">
                             <i class="material-icons">favorite</i>
                         </a>
@@ -119,8 +122,7 @@
             <div class="col s12 l6">
                 <div class="card" id="cards">
                     <div class="card-image">
-                        <img src="placeholder.jpg"
-                            alt="">
+                        <img src="placeholder.jpg" alt="">
                         <a href="#" class="halfway-fab btn-floating pink pulse">
                             <i class="material-icons">favorite</i>
                         </a>
@@ -142,8 +144,7 @@
             <div class="col s12 l6">
                 <div class="card" id="cards">
                     <div class="card-image">
-                        <img src="placeholder.jpg"
-                            alt="">
+                        <img src="placeholder.jpg" alt="">
                         <a href="#" class="halfway-fab btn-floating pink pulse">
                             <i class="material-icons">favorite</i>
                         </a>
@@ -161,12 +162,11 @@
                 </div>
             </div>
 
-             <!-- card4 -->
-             <div class="col s12 l6">
+            <!-- card4 -->
+            <div class="col s12 l6">
                 <div class="card" id="cards">
                     <div class="card-image">
-                        <img src="placeholder.jpg"
-                            alt="">
+                        <img src="placeholder.jpg" alt="">
                         <a href="#" class="halfway-fab btn-floating pink pulse">
                             <i class="material-icons">favorite</i>
                         </a>
@@ -184,61 +184,107 @@
                 </div>
             </div>
         </div>
-
+        <!-- MODAL -->
         <h4>Modals</h4>
 
         <a href="#terms" class="btn orange modal-trigger">Edit Search</a>
         <div class="modal" id="terms">
             <div class="modal-content">
-                <h4>Input Form</h4>
+                <h4 id="modalTitle">Input Form</h4>
                 <div class="row">
+                    <div class="container">
+                        <!-- LOCATION -->
+                        <form class="col s12">
+                            <div class="row">
+                                <div class="input-field col s6" id="location">
+                                    <i class="material-icons prefix">home</i>
+                                    <input id="icon_prefix" type="text" class="validate">
+                                    <label for="icon_prefix">Location</label>
+                                </div>
+                            </div>
+                        </form>
+                        <!-- ROTTEN TOMATOES SLIDER -->
+                        <form action="#">
+                            <h5>Rotten Tomatoes Rating</h5>
+                            <i class="material-icons prefix">theaters</i>
+                            <p class="range-field">
+                                <input type="range" id="test5" min="0" max="100" />
+                            </p>
+                        </form>
+                        <!-- WAIT TIME SLIDER -->
+                        <form action="#">
+                            <h5>Wait Time</h5>
+                            <i class="material-icons prefix">access_time</i>
+                            <p class="range-field">
+                                <input type="range" id="test5" min="0" max="100" />
+                            </p>
+                        </form>
+                    
+                    <!-- RATING RADIO BUTTONS -->
                     <form class="col s12">
                         <div class="row">
-                            <div class="input-field col s6" id="location">
-                                <i class="material-icons prefix">home</i>
-                                <input id="icon_prefix" type="text" class="validate">
-                                <label for="icon_prefix">Location</label>
-                            </div>
                             <div class="input-field col s6" id="rottenTomatoes">
-                                <i class="material-icons prefix">theaters</i>
-                                <input id="icon_telephone" type="text" class="validate">
-                                <label for="icon_telephone">Rotten Tomatoes Minimum Score</label>
+                                <form action="#">
+                                    <h5 id="rtTitle">Movie Rating(minimum)</h5>
+                                    <p>
+                                        <label>
+                                            <input class="with-gap" id="select" name="group1" type="radio" checked />
+                                            <span>G</span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input class="with-gap" id="select" name="group1" type="radio" />
+                                            <span>PG</span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input class="with-gap" id="select" name="group1" type="radio" />
+                                            <span>PG-13</span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input class="with-gap" id="select" name="group1" type="radio" />
+                                            <span>R</span>
+                                        </label>
+                                    </p>
+                                </form>
                             </div>
                         </div>
                     </form>
-                    <form class="col s12">
-                        <div class="row">
-                            <div class="input-field col s6" id="waitTime">
-                                <i class="material-icons prefix">access_time</i>
-                                <input id="icon_prefix" type="text" class="validate">
-                                <label for="icon_prefix">Max Weight Time</label>
+                        <form class="col s12">
+                            <div class="row">
+                                <div class="input-field col s12" id="genre">
+                                    <select multiple>
+                                        <option value="" disabled>Choose your option</option>
+                                        <option value="1">Action</option>
+                                        <option value="2">Adventure</option>
+                                        <option value="3">Comedy</option>
+                                        <option value="4">Crime and Gangster</option>
+                                        <option value="5">Drama</option>
+                                        <option value="6">Epics/Historical</option>
+                                        <option value="7">Horror</option>
+                                        <option value="8">Musicals</option>
+                                        <option value="9">Science Fiction</option>
+                                        <option value="10">War</option>
+                                        <option value="11">Westerns</option>
+                                    </select>
+                                    <label>Movie Genere's</label>
+                                </div>
+
                             </div>
-                            <div class="input-field col s12" id="genre">
-                                <select multiple>
-                                    <option value="" disabled>Choose your option</option>
-                                    <option value="1">Action</option>
-                                    <option value="2">Adventure</option>
-                                    <option value="3">Comedy</option>
-                                    <option value="4">Crime and Gangster</option>
-                                    <option value="5">Drama</option>
-                                    <option value="6">Epics/Historical</option>
-                                    <option value="7">Horror</option>
-                                    <option value="8">Musicals</option>
-                                    <option value="9">Science Fiction</option>
-                                    <option value="10">War</option>
-                                    <option value="11">Westerns</option>
-                                </select>
-                                <label>Materialize Multiple Select</label>
-                            </div>
-                        </div>
-                    </form>
+                        </form>
+                    
                 </div>
+            </div>
             </div>
             <div class="modal-footer">
                 <a href="" class="modal-close btn red">Submit</a>
             </div>
         </div>
-    <!-- End Of Container -->
+        <!-- End Of Container -->
     </div>
 
     <!-- footer -->
@@ -297,14 +343,48 @@
         indicators: true
     });
 
-     // modal
-     $(document).ready(function () {
-            $('.modal').modal();
-        })
+    // modal
+    $(document).ready(function () {
+        $('.modal').modal();
+    })
 
-     // multiple select form
-     $(document).ready(function () {
-            $('select').formSelect();
-        });
+    // multiple select form
+    $(document).ready(function () {
+        $('select').formSelect();
+    });
+
+    // constructing a queryURL variable we will use instead of the literal string inside of the ajax method
+    var title = "space+jam";
+    var queryURL = "https://www.omdbapi.com/?t=" + title + "&y=&plot=short&apikey=trilogy";
+
+    //ajax call 
+    $.ajax({
+        url: queryURL,
+        method: "GET"
+    }).then(function (response) {
+        console.log(response);
+        console.log(response.Title);
+        console.log(response.imdbRating);
+        console.log(response.Genre);
+        console.log(response.Runtime);
+        console.log(response.Awards)
+        console.log(response.Director)
+        console.log(response.Released)
+    });
+
+    var slider = document.getElementById('test-slider');
+    noUiSlider.create(slider, {
+        start: [20, 80],
+        connect: true,
+        step: 1,
+        orientation: 'horizontal', // 'horizontal' or 'vertical'
+        range: {
+            'min': 0,
+            'max': 100
+        },
+        format: wNumb({
+            decimals: 0
+        })
+    });
 
 </script>
