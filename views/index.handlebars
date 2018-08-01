@@ -7,17 +7,20 @@
           <div id="pick-rating"></div>
         </div>
       </div>
-      <div class="pick-genres">
-        <span class="genre-tab">Genres:</span>
-        <span id="pick-genre-list"></span>
+      <div class="under-screen-wrapper">
+        <div class="pick-genres">
+          <span class="genre-tab">Genres:</span>
+          <span id="pick-genre-list"></span>
+        </div>
+        <div class="caption">
+          <p>
+            <b>Synopsis:</b>
+            <span id="pick-synopsis">...</span>
+          </p>
+        </div>
       </div>
-      <div class="caption">
-        <p>
-          <b>Synopsis:</b>
-          <span id="pick-synopsis">...</span>
-        </p>
-      </div>
-      {{!-- <div class="mobile-only">{{> change-settings}}</div> --}}
+      {{!--
+      <div class="mobile-only">{{> change-settings}}</div> --}}
     </div>
     <div class="right">
       <div class="pick-showtime">
@@ -25,8 +28,17 @@
         <div id="pick-time">00:00</div>
         at
         <div id="pick-place">a theater near you</div>
-        <span class="pick-route">Get route
-          <i class="fas fa-location-arrow" style="font-size: .8em;"></i>
+        <div id="pick-route">
+          <a herf="">
+            <i class="fas fa-location-arrow"></i>
+            Get route
+          </a>
+        </div>
+        <span id="pick-tickets">
+          <a herf="">
+            <i class="fas fa-ticket-alt"></i>
+            Get tickets
+          </a>
         </span>
       </div>
       <div class="pick-RT">
@@ -58,7 +70,7 @@
 
     <div class="fp-container">
       <!-- cards -->
-      
+
       <!-- card1 -->
       <div class="row">
         <div class="col s12 m6 l4">
@@ -71,10 +83,18 @@
               <p id="op1-synopsis"></p>
             </div>
             <div class="card-action">
-              <p>NEXT SHOWTIME: <span id="op1-time"></span></p>
-              <p>at <span id="op1-place"></span></p>
-              <p>Critic rating: <span id="op1-critic-score"></span></p>
-              <p>Audience rating: <span id="op1-audience-score"></span></p>
+              <p>NEXT SHOWTIME:
+                <span id="op1-time"></span>
+              </p>
+              <p>at
+                <span id="op1-place"></span>
+              </p>
+              <p>Critic rating:
+                <span id="op1-critic-score"></span>
+              </p>
+              <p>Audience rating:
+                <span id="op1-audience-score"></span>
+              </p>
             </div>
           </div>
         </div>
@@ -90,10 +110,18 @@
               <p id="op2-synopsis"></p>
             </div>
             <div class="card-action">
-              <p>NEXT SHOWTIME: <span id="op2-time"></span></p>
-              <p>at <span id="op2-place"></span></p>
-              <p>Critic rating: <span id="op2-critic-score"></span></p>
-              <p>Audience rating: <span id="op2-audience-score"></span></p>
+              <p>NEXT SHOWTIME:
+                <span id="op2-time"></span>
+              </p>
+              <p>at
+                <span id="op2-place"></span>
+              </p>
+              <p>Critic rating:
+                <span id="op2-critic-score"></span>
+              </p>
+              <p>Audience rating:
+                <span id="op2-audience-score"></span>
+              </p>
             </div>
           </div>
         </div>
@@ -106,13 +134,21 @@
             </div>
             <div class="card-content">
               <span id="op3-title" class="card-title">Loading...</span>
-              <p  id="op3-synopsis"></p>
+              <p id="op3-synopsis"></p>
             </div>
             <div class="card-action">
-              <p>NEXT SHOWTIME: <span id="op3-time"></span></p>
-              <p>at <span id="op3-place"></span></p>
-              <p>Critic rating: <span id="op3-critic-score"></span></p>
-              <p>Audience rating: <span id="op3-audience-score"></span></p>
+              <p>NEXT SHOWTIME:
+                <span id="op3-time"></span>
+              </p>
+              <p>at
+                <span id="op3-place"></span>
+              </p>
+              <p>Critic rating:
+                <span id="op3-critic-score"></span>
+              </p>
+              <p>Audience rating:
+                <span id="op3-audience-score"></span>
+              </p>
             </div>
           </div>
         </div>
