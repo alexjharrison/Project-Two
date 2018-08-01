@@ -6,23 +6,24 @@ var fs = require("fs");
 
 module.exports = function (app) {
   var iShowtimesData;
-  
+
   app.post("/", function (req, res) {
     // db.User.create(req.body).then(function (userdb) {
     //   res.json(userdb);
     // });
     console.log(req.body);
-    ishowtimesApiCall();
 
-    res.json(iShowtimesData);
+    omdbApiCall("Space Jam");
+    ishowtimesApiCall();
   });
 
-  function ishowtimesApiCall(location) {
+  function ishowtimesApiCall() {
     request.get({
       url: `https://api.internationalshowtimes.com/v4/showtimes/?location=40.5431598,-74.36320490000003&distance=10&all_fields=true&append=movies,cinemas`,
       headers: { 'X-API-Key': process.env.ISHOWTIMES_KEY }
     }, function (err, res, body) {
       if (err) throw err;
+      // console.log(body);
       var showtimes = JSON.parse(body).showtimes;
       var movies = JSON.parse(body).movies;
       var cinemas = JSON.parse(body).cinemas;
@@ -34,7 +35,7 @@ module.exports = function (app) {
           title: movie.title
         }
       })
-      showtimes = showtimes.filter(time => time.start_at.includes("2018-07-31") && (time.start_at > timeNow));
+      showtimes = showtimes.filter(time => time.start_at.includes(moment().format("YYYY-MM-DD")) && (time.start_at > timeNow));
       iShowtimesData = showtimes.map(time => {
         var movieLocation, cinemaLocation;
         for (var i = 0; i < movieList.length; i++) {
@@ -50,10 +51,18 @@ module.exports = function (app) {
           movie_name: movieList[movieLocation].title,
           cinema_name: cinemas[cinemaLocation].name,
           address: cinemas[cinemaLocation].location.address.display_text,
-          gmaps: "https://www.google.com/maps/dir/?api=1&origin=40.5431598%2C-74.36320490000003&destination="+cinemas[cinemaLocation].location.address.display_text.replace(/ /g,"+").replace(/,/g,"%2C")
+          gmaps: "https://www.google.com/maps/dir/?api=1&origin=40.5431598%2C-74.36320490000003&destination=" + cinemas[cinemaLocation].name.replace(/ /g, "+").replace(/,/g, "%2C"),
+          
         }
       })
-      console.log(iShowtimesData);
+      console.log(iShowtimesData)
+    });
+  }
+  function omdbApiCall(movieName) {
+    request.get({
+      url: `https://www.omdbapi.com/?t=${movieName}&y=&plot=short&apikey=${process.env.OMDB_KEY}`,
+    }, function (err, res, body) {
+      console.log(body);
     });
   }
 
