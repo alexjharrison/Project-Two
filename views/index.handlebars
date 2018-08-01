@@ -3,19 +3,18 @@
     <div class="left">
       <div class="screen-wrapper">
         <div class="screen">
-          <div id="pick-title">The Incredibles 2</div>
-          <div id="pick-rating">PG</div>
+          <div id="pick-title">Loading...</div>
+          <div id="pick-rating"></div>
         </div>
       </div>
       <div class="pick-genres">
         <span class="genre-tab">Genres:</span>
-        <span id="pick-genre-list">Action &amp; Adventure, Animation, Kids &amp; Family</span>
+        <span id="pick-genre-list"></span>
       </div>
       <div class="caption">
         <p>
           <b>Synopsis:</b>
-          <span id="pick-synopsis">Everyone's favorite family of superheroes is back in "Incredibles 2"--but this time Helen (voice of Holly Hunter)
-            is in the spotlight, leaving...</span>
+          <span id="pick-synopsis">...</span>
         </p>
       </div>
       {{!-- <div class="mobile-only">{{> change-settings}}</div> --}}
@@ -23,28 +22,28 @@
     <div class="right">
       <div class="pick-showtime">
         Next showtime:
-        <div id="pick-time">7:45</div>
+        <div id="pick-time">00:00</div>
         at
-        <div id="pick-place">Rutgers Coding Bootcamp Cinema</div>
+        <div id="pick-place">a theater near you</div>
         <span class="pick-route">Get route
           <i class="fas fa-location-arrow" style="font-size: .8em;"></i>
         </span>
       </div>
       <div class="pick-RT">
         <div class="RT-logo">
-          <a href="https://rottentomatoes.com" target="_blank">
+          <a href="https://rottentomatoes.com" target="-blank">
             <img src="../images/RottenTomatoesLogo.png" style="width: 90%; padding: 8px">
           </a>
         </div>
         <div class="pick-critic-box">
           <div id="pick-critic-score">
-            93%
+            0%
           </div>
           critic score
         </div>
         <div class="pick-audience-box">
           <div id="pick-audience-score">
-            85%
+            0%
           </div>
           audience score
         </div>
@@ -59,57 +58,61 @@
 
     <div class="fp-container">
       <!-- cards -->
+      
       <!-- card1 -->
       <div class="row">
         <div class="col s12 m6 l4">
-          <div class="card" id="cards">
+          <div class="card" id="card1">
             <div class="card-image">
-              <img src="../images/placeholder.jpg" alt="">
+              <img id="op1-img" src="../images/card-loading.gif" alt="">
             </div>
             <div class="card-content">
-              <span class="card-title">Movie Name</span>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam sed error ea vero, beatae omnis. Quam et
-                rerum totam tempore blanditiis dolorum provident voluptatem, assumenda voluptatibus odit quo. Porro, dolorum?</p>
+              <span id="op1-title" class="card-title">Loading...</span>
+              <p id="op1-synopsis"></p>
             </div>
             <div class="card-action">
-              <a href="">Showtimes</a>
-              <a href="">Info</a>
+              <p>NEXT SHOWTIME: <span id="op1-time"></span></p>
+              <p>at <span id="op1-place"></span></p>
+              <p>Critic rating: <span id="op1-critic-score"></span></p>
+              <p>Audience rating: <span id="op1-audience-score"></span></p>
             </div>
           </div>
         </div>
 
         <!-- card2 -->
         <div class="col s12 m6 l4">
-          <div class="card" id="cards">
+          <div class="card" id="card2">
             <div class="card-image">
-              <img src="../images/placeholder.jpg" alt="">
+              <img id="op2-img" src="../images/card-loading.gif" alt="">
             </div>
             <div class="card-content">
-              <span class="card-title">Movie Name</span>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam sed error ea vero, beatae omnis. Quam et
-                rerum totam tempore blanditiis dolorum provident voluptatem, assumenda voluptatibus odit quo. Porro, dolorum?</p>
+              <span id="op2-title" class="card-title">Loading...</span>
+              <p id="op2-synopsis"></p>
             </div>
             <div class="card-action">
-              <a href="">Showtimes</a>
-              <a href="">Info</a>
+              <p>NEXT SHOWTIME: <span id="op2-time"></span></p>
+              <p>at <span id="op2-place"></span></p>
+              <p>Critic rating: <span id="op2-critic-score"></span></p>
+              <p>Audience rating: <span id="op2-audience-score"></span></p>
             </div>
           </div>
         </div>
 
         <!-- card3 -->
         <div class="col s12 m6 l4">
-          <div class="card" id="cards">
+          <div class="card" id="card3">
             <div class="card-image">
-              <img src="../images/placeholder.jpg" alt="">
+              <img id="op3-img" src="../images/card-loading.gif" alt="">
             </div>
             <div class="card-content">
-              <span class="card-title">Movie Name</span>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam sed error ea vero, beatae omnis. Quam et
-                rerum totam tempore blanditiis dolorum provident voluptatem, assumenda voluptatibus odit quo. Porro, dolorum?</p>
+              <span id="op3-title" class="card-title">Loading...</span>
+              <p  id="op3-synopsis"></p>
             </div>
             <div class="card-action">
-              <a href="">Showtimes</a>
-              <a href="">Info</a>
+              <p>NEXT SHOWTIME: <span id="op3-time"></span></p>
+              <p>at <span id="op3-place"></span></p>
+              <p>Critic rating: <span id="op3-critic-score"></span></p>
+              <p>Audience rating: <span id="op3-audience-score"></span></p>
             </div>
           </div>
         </div>

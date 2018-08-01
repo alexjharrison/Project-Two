@@ -57,6 +57,9 @@ header h1 {
   margin: 0 auto;
   text-align: center;
 }
+.fp-container p {
+  margin: 5px;
+}
 
 .button-box {
   color: grey;
@@ -96,6 +99,7 @@ a.pick-settings:hover{
 }
 
 .top-content .left {
+  width: 100%;
   max-width: 750px;
   display: flex;
   flex-wrap: wrap;
@@ -143,6 +147,8 @@ a.pick-settings:hover{
 }
 
 .top-content .caption {
+  text-align: left;
+  width: 100%;
   font-size: 17px;
   background-color: rgba(128, 128, 128, 0.2);
   padding: 5px 8px;
@@ -153,7 +159,7 @@ a.pick-settings:hover{
  height: 400px;
  padding-top: 56.25%;;
   background-color: #000;
-  background-image: url("../images/placeholder.jpg");
+  background-image: url("../images/loading.gif");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
