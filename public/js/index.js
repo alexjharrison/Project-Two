@@ -13,6 +13,13 @@ poster https://stackoverflow.com/questions/253689/switching-a-div-background-ima
 RT url  https://stackoverflow.com/questions/179713/how-to-change-the-href-for-a-hyperlink-using-jquery
 Route finder
 */
+var userSettings = {
+    location: "place", //fix later
+    maxDis: "25",
+    maxRating: "PG-13",
+    scoreMin: "75"
+}
+
 var latitude, longitude;
 
 
@@ -25,6 +32,22 @@ $(() => {
     $("#submit").click(function (event) {
         event.preventDefault();
         post();
+        userSettings.location = ($("#location").val())
+        userSettings.scoreMin = ($("#scoreMin").val())
+        userSettings.maxDis = ($("#maxDis").val())
+        console.log($("#location").val());
+        console.log($("#scoreMin").val());
+        console.log($("#maxDis").val());
+        var rating = document.getElementsByName('group1');
+        // getValues(ques1); 
+        for (var i = 0, length = rating.length; i < length; i++) {
+            if (rating[i].checked) {
+                console.log(rating[i].value);
+                userSettings.maxRating = rating[i].value;
+                break;
+            }
+        }
+        return userSettings;
     })
 })
 
@@ -32,12 +55,10 @@ function post() {
     console.log(latitude, longitude);
     console.log($("#icon_prefix").val())
     $.post("/", {
-        location: $("#icon_prefix").val(),
-        minRT: 60, //minimum percent score from rotten tomatoes
-        maxWait: 60,  //maximum wait in minutes from time to arrive at theater to movie start
-        disInclude: [], // array of genres not to include
-        maxRating: "R",  //not to include this rating or above
-        maxDistance: 10,  //max distance in miles to theater
+        location: userSettings.location,
+        minRT: userSettings.scoreMin, //minimum percent score from rotten tomatoes
+        maxRating: userSettings.maxRating,  //not to include this rating or above
+        maxDistance: userSettings.maxDis,  //max distance in miles to theater
         latitude: latitude,
         longitude: longitude
     }, function (data, status) {
