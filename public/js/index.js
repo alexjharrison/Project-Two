@@ -21,7 +21,7 @@ $(() => {
         latitude = position.coords.latitude;
         longitude = position.coords.longitude;
     })
-    setTimeout(post,1000);
+    setTimeout(post,3000);
     $("#submit").click(function (event) {
         event.preventDefault();
         post();
@@ -33,7 +33,7 @@ function post() {
     console.log($("#icon_prefix").val())
     $.post("/", {
         location: $("#icon_prefix").val(),
-        minRT: 60, //minimum percent score from rotten tomatoes
+        minRT: 66, //minimum percent score from rotten tomatoes
         maxWait: 60,  //maximum wait in minutes from time to arrive at theater to movie start
         disInclude: [], // array of genres not to include
         maxRating: "R",  //not to include this rating or above

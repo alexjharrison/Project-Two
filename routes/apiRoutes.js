@@ -7,98 +7,98 @@ var fs = require("fs");
 
 var placeholderData = [
   {
-      name: "best movie name",
-      rating: "R",
-      genre: ["action, adventure"],
-      rtRating: "86",
-      metaCritic: "70",
-      posterImage: "http://via.placeholder.com/300x475",
-      description: "Some people do things",
-      showtime: "8:30pm",
-      theater: "amc multiplex",
-      time2Theater: 34,  //minutes to drive to theater
-      miles2Theater: 5,  //miles to drive to theater
-      gMapsLink: "http://maps.google.com/",
-      buyTixLink: "http://amc.com"
+    name: "best movie name",
+    rating: "R",
+    genre: ["action, adventure"],
+    rtRating: "86",
+    metaCritic: "70",
+    posterImage: "http://via.placeholder.com/300x475",
+    description: "Some people do things",
+    showtime: "8:30pm",
+    theater: "amc multiplex",
+    time2Theater: 34,  //minutes to drive to theater
+    miles2Theater: 5,  //miles to drive to theater
+    gMapsLink: "http://maps.google.com/",
+    buyTixLink: "http://amc.com"
   },
   {
-      name: "second best movie name",
-      rating: "R",
-      genre: ["action, adventure"],
-      rtRating: "86",
-      metaCritic: "70",
-      posterImage: "http://via.placeholder.com/300x475",
-      description: "Some people do things",
-      showtime: "8:30pm",
-      theater: "amc multiplex",
-      time2Theater: 34,  //minutes to drive to theater
-      miles2Theater: 5,  //miles to drive to theater
-      gMapsLink: "http://maps.google.com/",
-      buyTixLink: "http://amc.com"
+    name: "second best movie name",
+    rating: "R",
+    genre: ["action, adventure"],
+    rtRating: "86",
+    metaCritic: "70",
+    posterImage: "http://via.placeholder.com/300x475",
+    description: "Some people do things",
+    showtime: "8:30pm",
+    theater: "amc multiplex",
+    time2Theater: 34,  //minutes to drive to theater
+    miles2Theater: 5,  //miles to drive to theater
+    gMapsLink: "http://maps.google.com/",
+    buyTixLink: "http://amc.com"
   },
   {
-      name: "third best movie name",
-      rating: "R",
-      genre: ["action, adventure"],
-      rtRating: "86",
-      metaCritic: "70",
-      posterImage: "http://via.placeholder.com/300x475",
-      description: "Some people do things",
-      showtime: "8:30pm",
-      theater: "amc multiplex",
-      time2Theater: 34,  //minutes to drive to theater
-      miles2Theater: 5,  //miles to drive to theater
-      gMapsLink: "http://maps.google.com/",
-      buyTixLink: "http://amc.com"
+    name: "third best movie name",
+    rating: "R",
+    genre: ["action, adventure"],
+    rtRating: "86",
+    metaCritic: "70",
+    posterImage: "http://via.placeholder.com/300x475",
+    description: "Some people do things",
+    showtime: "8:30pm",
+    theater: "amc multiplex",
+    time2Theater: 34,  //minutes to drive to theater
+    miles2Theater: 5,  //miles to drive to theater
+    gMapsLink: "http://maps.google.com/",
+    buyTixLink: "http://amc.com"
   },
   {
-      name: "fourth best movie name",
-      rating: "R",
-      genre: ["action, adventure"],
-      rtRating: "86",
-      metaCritic: "70",
-      posterImage: "http://via.placeholder.com/300x475",
-      description: "Some people do things",
-      showtime: "8:30pm",
-      theater: "amc multiplex",
-      time2Theater: 34,  //minutes to drive to theater
-      miles2Theater: 5,  //miles to drive to theater
-      gMapsLink: "http://maps.google.com/",
-      buyTixLink: "http://amc.com"
+    name: "fourth best movie name",
+    rating: "R",
+    genre: ["action, adventure"],
+    rtRating: "86",
+    metaCritic: "70",
+    posterImage: "http://via.placeholder.com/300x475",
+    description: "Some people do things",
+    showtime: "8:30pm",
+    theater: "amc multiplex",
+    time2Theater: 34,  //minutes to drive to theater
+    miles2Theater: 5,  //miles to drive to theater
+    gMapsLink: "http://maps.google.com/",
+    buyTixLink: "http://amc.com"
   },
   {
-      name: "fifth best movie name",
-      rating: "R",
-      genre: ["action, adventure"],
-      rtRating: "86",
-      metaCritic: "70",
-      posterImage: "http://via.placeholder.com/300x475",
-      description: "Some people do things",
-      showtime: "8:30pm",
-      theater: "amc multiplex",
-      time2Theater: 34,  //minutes to drive to theater
-      miles2Theater: 5,  //miles to drive to theater
-      gMapsLink: "http://maps.google.com/",
-      buyTixLink: "http://amc.com"
+    name: "fifth best movie name",
+    rating: "R",
+    genre: ["action, adventure"],
+    rtRating: "86",
+    metaCritic: "70",
+    posterImage: "http://via.placeholder.com/300x475",
+    description: "Some people do things",
+    showtime: "8:30pm",
+    theater: "amc multiplex",
+    time2Theater: 34,  //minutes to drive to theater
+    miles2Theater: 5,  //miles to drive to theater
+    gMapsLink: "http://maps.google.com/",
+    buyTixLink: "http://amc.com"
   },
   {
-      name: "sixth best movie name",
-      rating: "R",
-      genre: ["action, adventure"],
-      rtRating: "86",
-      metaCritic: "70",
-      posterImage: "http://via.placeholder.com/300x475",
-      description: "Some people do things",
-      showtime: "8:30pm",
-      theater: "amc multiplex",
-      time2Theater: 34,  //minutes to drive to theater
-      miles2Theater: 5,  //miles to drive to theater
-      gMapsLink: "http://maps.google.com/",
-      buyTixLink: "http://amc.com"
+    name: "sixth best movie name",
+    rating: "R",
+    genre: ["action, adventure"],
+    rtRating: "86",
+    metaCritic: "70",
+    posterImage: "http://via.placeholder.com/300x475",
+    description: "Some people do things",
+    showtime: "8:30pm",
+    theater: "amc multiplex",
+    time2Theater: 34,  //minutes to drive to theater
+    miles2Theater: 5,  //miles to drive to theater
+    gMapsLink: "http://maps.google.com/",
+    buyTixLink: "http://amc.com"
   }
 ];
 
-var iShowtimesData, location, minRT, maxWait, disInclude, maxRating, maxDistance, latitude, longitude, movieList, response;
+var iShowtimesData, location, minRT, maxWait, disInclude, maxRating, maxDistance, latitude, longitude, movieList, response, counter;
 module.exports = function (app) {
 
 
@@ -163,7 +163,7 @@ module.exports = function (app) {
         omdbCall(movieList[i].title, i);
       }
     });
-    var counter = 0;
+    counter = 0;
     function omdbCall(title, i) {
       request.get({
         url: `https://www.omdbapi.com/?t=${title}&y=&plot=short&apikey=${process.env.OMDB_KEY}`
@@ -209,16 +209,63 @@ module.exports = function (app) {
           filteredMovieList.push(movie);
       }
     });
-    console.log(filteredMovieList);
-    var filterediShowtimesData = iShowtimesData.filter(showtime=>filteredMovieList.title==showtime.movie_name)
-    response.json(placeholderData);
+
+
+
+    //get critic score
+    var rtScore = filteredMovieList.map(movie => {
+      if (movie.scores === [] || !movie.scores)
+        return "N/A";
+      else {
+        var rt, imdb, meta;
+        for (var i = 0; i < movie.scores.length; i++) {
+          if (movie.scores[i].Source === "Rotten Tomatoes")
+            rt = movie.scores[i].Value;
+          else if (movie.scores[i].Source === "Internet Movie Database")
+            imdb = movie.scores[i].Value;
+          else if (movie.scores[i].Source === "Metacritic")
+            meta = movie.scores[i].Value;
+          console.log(rt, imdb, meta);
+        }
+        if (rt) return parseFloat(rt.replace("%", ""));
+        else if (meta) return parseFloat(meta.replace("/100", ""));
+        else if (imdb) return parseFloat(imdb.replace("/10", "")) * 10;
+        else return "N/A";
+      }
+    });
+    console.log(filteredMovieList, rtScore);
+    filteredMovieList = filteredMovieList.filter((movie, i) => rtScore[i] !== "N/A" && rtScore[i] > minRT);
+    rtScore = rtScore.filter((score) => score !== "N/A" && score > minRT);
+    console.log(filteredMovieList, rtScore);
+
+    //remove showtimes by disqualifiers
+    var list = filteredMovieList.map(movie => movie.title);
+    var filterediShowtimesData = iShowtimesData.filter((showtime, i) => list.includes(showtime.movie_name))
+
+    var theaters = [];
+    filterediShowtimesData.forEach(showtime => {
+      if (!theaters.includes(showtime.cinema_name))
+        theaters.push(showtime.cinema_name);
+    });
+    console.log(theaters);
+
+    counter = 0;
+    theaters.forEach((theater,i) => {
+      distance(theater,i)
+    });
+
+
+    response.json(filterediShowtimesData);
   }
-  function geocoderer(location){
+  function distance(theater, index) {
+
+  }
+  function geocoderer(location) {
     console.log(location);
     geocoder.geocode(location, (err, data) => {
       if (err) throw err;
       console.log(data);
-      if(data.results===[]) {
+      if (data.results === []) {
         geocoderer(location);
         return;
       }
