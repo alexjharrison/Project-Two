@@ -281,7 +281,7 @@ module.exports = function (app) {
     ////////////////////////////////////////////////////////////////
     var a = moment();
     var timeAfterDriving = timeText.map(time => a.add(time, "minutes"));
-    console.log(timeAfterDriving);
+  
 
 
 
