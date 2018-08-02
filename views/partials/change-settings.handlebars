@@ -22,15 +22,15 @@
                         <h5>Minimum Critic Score</h5>
                         <i class="material-icons prefix">theaters</i>
                         <p class="range-field">
-                            <input type="range" id="test5" min="0" max="100"/>
+                            <input type="range" id="scoreMin" min="0" max="100"/>
                         </p>
                     </form>
-                    <!-- WAIT TIME SLIDER -->
+                    <!-- WAIT DISTANCE SLIDER -->
                     <form action="#">
                         <h5>Max Distance (in miles)</h5>
                         <i class="material-icons prefix">route</i>
                         <p class="range-field">
-                            <input type="range" id="test5" min="0" max="100" />
+                            <input type="range" id="maxDis" min="0" max="50" />
                         </p>
                     </form>
 
@@ -40,36 +40,38 @@
                             <div class="input-field col s6" id="rottenTomatoes">
                                 <form action="#">
                                     <h5 id="rtTitle">Movie Rating (Maximum)</h5>
+                                    <fieldset id = "movieRating">
                                     <p>
                                         <label>
-                                            <input class="with-gap" id="select" name="group1" type="radio" checked />
+                                            <input class="with-gap" id="select" name="group1" type="radio" value="G" checked />
                                             <span>G</span>
                                         </label>
                                     </p>
                                     <p>
                                         <label>
-                                            <input class="with-gap" id="select" name="group1" type="radio" />
+                                            <input class="with-gap" id="select" name="group1" type="radio" value="PG" />
                                             <span>PG</span>
                                         </label>
                                     </p>
                                     <p>
                                         <label>
-                                            <input class="with-gap" id="select" name="group1" type="radio" />
+                                            <input class="with-gap" id="select" name="group1" type="radio" value = "PG-13" />
                                             <span>PG-13</span>
                                         </label>
                                     </p>
                                     <p>
                                         <label>
-                                            <input class="with-gap" id="select" name="group1" type="radio" />
+                                            <input class="with-gap" id="select" name="group1" type="radio" value = "R" />
                                             <span>R</span>
                                         </label>
                                     </p>
                                     <p>
                                         <label>
-                                            <input class="with-gap" id="select" name="group1" type="radio" />
+                                            <input class="with-gap" id="select" name="group1" type="radio" value = "NA" />
                                             <span>Any rating</span>
                                         </label>
                                     </p>
+                                    </fieldset>
                                 </form>
                             </div>
                         </div>
