@@ -30,8 +30,9 @@ $(() => {
 
 function post() {
     console.log(latitude,longitude);
+    console.log($("#icon_prefix").val())
     $.post("/", {
-        location: "123 Fake Street, Willingboro, NJ",
+        location: $("#icon_prefix").val(),
         minRT: 60, //minimum percent score from rotten tomatoes
         maxWait: 60,  //maximum wait in minutes from time to arrive at theater to movie start
         disInclude: [], // array of genres not to include
