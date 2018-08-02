@@ -31,11 +31,10 @@ $(() => {
     setTimeout(post, 3000);
     $("#submit").click(function (event) {
         event.preventDefault();
-        post();
-        userSettings.location = ($("#location").val())
+        userSettings.location = ($("#new-location").val())
         userSettings.scoreMin = ($("#scoreMin").val())
         userSettings.maxDis = ($("#maxDis").val())
-        console.log($("#location").val());
+        console.log($("#new-location").val());
         console.log($("#scoreMin").val());
         console.log($("#maxDis").val());
         var rating = document.getElementsByName('group1');
@@ -47,6 +46,7 @@ $(() => {
                 break;
             }
         }
+        post();
         return userSettings;
     })
 })

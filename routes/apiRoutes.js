@@ -281,7 +281,7 @@ module.exports = function (app) {
     ////////////////////////////////////////////////////////////////
     var a = moment();
     var timeAfterDriving = timeText.map(time => a.add(time, "minutes"));
-  
+    
 
 
 
@@ -293,7 +293,7 @@ module.exports = function (app) {
 
 
     ///////////////////////////////////////////////////////////////
-    response.json(filterediShowtimesData);
+    response.json(placeholderData);
   }
   function geocoderer(location) {
     console.log(location);
