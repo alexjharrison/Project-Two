@@ -162,18 +162,19 @@
                 </div>
             </div>
 
+            <!-- TEST CARD -->
             <!-- card4 -->
             <div class="col s12 l6">
                 <div class="card" id="cards">
                     <div class="card-image">
-                        <img src="placeholder.jpg" alt="">
+                        <img src="placeholder.jpg" id="moviePic" alt="">
                         <a href="#" class="halfway-fab btn-floating pink pulse">
                             <i class="material-icons">favorite</i>
                         </a>
                     </div>
                     <div class="card-content">
-                        <span class="card-title">Movie Name</span>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam sed error ea vero, beatae omnis.
+                        <span class="card-title" id="movieName">Movie Name</span>
+                        <p id="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam sed error ea vero, beatae omnis.
                             Quam et rerum totam tempore blanditiis dolorum provident voluptatem, assumenda voluptatibus odit
                             quo. Porro, dolorum?</p>
                     </div>
@@ -372,6 +373,17 @@
         console.log(response.Released)
     });
 
+    //ajax post
+    $.ajax({
+        url: queryURL,
+        method: "POST",
+        data: data
+    }).then(function(response){
+        $("#moviePic").html();
+        $("#movieName").html();
+        $("#content").html();
+    });
+
     var slider = document.getElementById('test-slider');
     noUiSlider.create(slider, {
         start: [20, 80],
@@ -388,3 +400,5 @@
     });
 
 </script>
+
+<!-- get info from api calls to appear on html -->
