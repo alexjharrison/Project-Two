@@ -31,12 +31,14 @@ $(() => {
     setTimeout(post, 3000);
     $("#submit").click(function (event) {
         event.preventDefault();
-        userSettings.location = ($("#new-location").val())
+        // userSettings.location = ($(".workdammit").val())
+        var locationion = $("#new-location").val()
         userSettings.scoreMin = ($("#scoreMin").val())
         userSettings.maxDis = ($("#maxDis").val())
         console.log($("#new-location").val());
         console.log($("#scoreMin").val());
         console.log($("#maxDis").val());
+        console.log(locationion)
         var rating = document.getElementsByName('group1');
         // getValues(ques1); 
         for (var i = 0, length = rating.length; i < length; i++) {
@@ -46,6 +48,7 @@ $(() => {
                 break;
             }
         }
+        console.log(userSettings);
         post();
         return userSettings;
     })
@@ -55,13 +58,14 @@ function post() {
     console.log(latitude, longitude);
     console.log($("#icon_prefix").val())
     $.post("/", {
-        location: userSettings.location,
+        location: $("#icon_prefix").val(),
         minRT: userSettings.scoreMin, //minimum percent score from rotten tomatoes
         maxRating: userSettings.maxRating,  //not to include this rating or above
         maxDistance: userSettings.maxDis,  //max distance in miles to theater
         latitude: latitude,
         longitude: longitude
     }, function (data, status) {
+        console.log(data);
         console.log("This is data 0: "+ data[0].title, status);
 
         // main pick

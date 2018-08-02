@@ -98,7 +98,8 @@ var placeholderData = [
   }
 ];
 
-var iShowtimesData, location, minRT, maxWait, disInclude, maxRating, maxDistance, latitude, longitude, movieList, response, counter, filteredMovieList, filterediShowtimesData;
+var iShowtimesData, location, minRT, maxWait, disInclude, maxRating, maxDistance, latitude, longitude, movieList, response, counter, filteredMovieList, filterediShowtimesData, timeText;
+var finalOutput = [];
 module.exports = function (app) {
 
 
@@ -226,7 +227,6 @@ module.exports = function (app) {
             imdb = movie.scores[i].Value;
           else if (movie.scores[i].Source === "Metacritic")
             meta = movie.scores[i].Value;
-          console.log(rt, imdb, meta);
         }
         if (rt) return parseFloat(rt.replace("%", ""));
         else if (meta) return parseFloat(meta.replace("/100", ""));
@@ -234,10 +234,8 @@ module.exports = function (app) {
         else return "N/A";
       }
     });
-    console.log(filteredMovieList, rtScore);
     filteredMovieList = filteredMovieList.filter((movie, i) => rtScore[i] !== "N/A" && rtScore[i] > minRT);
     rtScore = rtScore.filter((score) => score !== "N/A" && score > minRT);
-    console.log(filteredMovieList, rtScore);
 
     //remove showtimes by disqualifiers
     var list = filteredMovieList.map(movie => movie.title);
@@ -250,37 +248,44 @@ module.exports = function (app) {
     });
 
     counter = 0;
-    theaters.forEach(theater => {
-      distance(theater, theaters.length)
+    timeText = [];
+    theaters.forEach((theater, i) => {
+      distance(theaters,theater, theaters.length, i)
     });
 
 
 
   }
-  var timeText = [];
-  var timeNum = [];
-  function distance(theater, numTheaters) {
+
+  function distance(theaters,theater, numTheaters, i) {
+    var theaterLocation;
+    for (var i = 0; i < filterediShowtimesData.length; i++) {
+      if (filterediShowtimesData[i].cinema_name === theater)
+        theaterLocation = i;
+    }
     request.get({
-      url: `https://maps.googleapis.com/maps/api/distancematrix/json?origins=${latitude},${longitude}&destinations=${theater}&units=imperial&key=${process.env.GOOGLE_APIKEY}`
+      url: `https://maps.googleapis.com/maps/api/distancematrix/json?origins=${latitude},${longitude}&destinations=${theater},${filterediShowtimesData[theaterLocation].address}&units=imperial&key=${process.env.GOOGLE_APIKEY}`
     }, function (err, res, maps) {
       if (err) throw err;
+      timeText[counter] = (JSON.parse(maps).rows[0].elements[0].duration.text);
       counter++;
-      timeText.push(JSON.parse(maps).rows[0].elements[0].duration.text);
-      timeNum.push(JSON.parse(maps).rows[0].elements[0].duration.value);
-      console.log(counter, numTheaters)
       if (counter === numTheaters) {
-        timeMath(timeText, timeNum)
+        timeMath(theaters,timeText)
       }
     });
   }
-  function timeMath(timeText, timeNum) {
-    console.log(timeText, timeNum);
-    timeText = timeText.map(time => parseInt(time.replace(" mins", "")));
-    console.log(timeText);
-    console.log(filterediShowtimesData);
+  function timeMath(theaters,timeText) {
+    // console.log(timeText, timeNum);
+    timeText = timeText.map(time => parseFloat(time.replace(" mins", "")));
+    // console.log(timeText);
+    // console.log(filterediShowtimesData);
     ////////////////////////////////////////////////////////////////
-    var a = moment();
-    var timeAfterDriving = timeText.map(time => a.add(time, "minutes"));
+    var nowAfterDrive = timeText.map(adjustment => moment().add(adjustment, "minutes").format());
+
+
+
+    console.log(timeText,nowAfterDrive, theaters);
+
     
 
 
@@ -292,15 +297,15 @@ module.exports = function (app) {
 
 
 
+
+
     ///////////////////////////////////////////////////////////////
-    response.json(placeholderData);
+    response.json(filterediShowtimesData);
   }
   function geocoderer(location) {
-    console.log(location);
     geocoder.geocode(location, (err, data) => {
-      if (err) throw err;
       console.log(data);
-      if (data.results === []) {
+      if (data.results === [] || err) {
         geocoderer(location);
         return;
       }
