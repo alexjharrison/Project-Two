@@ -9,8 +9,6 @@ var placeholderData = [
   {
       name: "best movie name",
       rating: "R",
-      director: "estefan spielbergo",
-      stars: ["bobby bob","mary jean"],
       genre: ["action, adventure"],
       rtRating: "86",
       metaCritic: "70",
@@ -20,13 +18,12 @@ var placeholderData = [
       theater: "amc multiplex",
       time2Theater: 34,  //minutes to drive to theater
       miles2Theater: 5,  //miles to drive to theater
-      gMapsLink: "http://maps.google.com/"
+      gMapsLink: "http://maps.google.com/",
+      buyTixLink: "http://amc.com"
   },
   {
       name: "second best movie name",
       rating: "R",
-      director: "estefan spielbergo",
-      stars: ["bobby bob","mary jean"],
       genre: ["action, adventure"],
       rtRating: "86",
       metaCritic: "70",
@@ -36,13 +33,12 @@ var placeholderData = [
       theater: "amc multiplex",
       time2Theater: 34,  //minutes to drive to theater
       miles2Theater: 5,  //miles to drive to theater
-      gMapsLink: "http://maps.google.com/"
+      gMapsLink: "http://maps.google.com/",
+      buyTixLink: "http://amc.com"
   },
   {
       name: "third best movie name",
       rating: "R",
-      director: "estefan spielbergo",
-      stars: ["bobby bob","mary jean"],
       genre: ["action, adventure"],
       rtRating: "86",
       metaCritic: "70",
@@ -52,13 +48,12 @@ var placeholderData = [
       theater: "amc multiplex",
       time2Theater: 34,  //minutes to drive to theater
       miles2Theater: 5,  //miles to drive to theater
-      gMapsLink: "http://maps.google.com/"
+      gMapsLink: "http://maps.google.com/",
+      buyTixLink: "http://amc.com"
   },
   {
       name: "fourth best movie name",
       rating: "R",
-      director: "estefan spielbergo",
-      stars: ["bobby bob","mary jean"],
       genre: ["action, adventure"],
       rtRating: "86",
       metaCritic: "70",
@@ -68,13 +63,12 @@ var placeholderData = [
       theater: "amc multiplex",
       time2Theater: 34,  //minutes to drive to theater
       miles2Theater: 5,  //miles to drive to theater
-      gMapsLink: "http://maps.google.com/"
+      gMapsLink: "http://maps.google.com/",
+      buyTixLink: "http://amc.com"
   },
   {
       name: "fifth best movie name",
       rating: "R",
-      director: "estefan spielbergo",
-      stars: ["bobby bob","mary jean"],
       genre: ["action, adventure"],
       rtRating: "86",
       metaCritic: "70",
@@ -84,13 +78,12 @@ var placeholderData = [
       theater: "amc multiplex",
       time2Theater: 34,  //minutes to drive to theater
       miles2Theater: 5,  //miles to drive to theater
-      gMapsLink: "http://maps.google.com/"
+      gMapsLink: "http://maps.google.com/",
+      buyTixLink: "http://amc.com"
   },
   {
       name: "sixth best movie name",
       rating: "R",
-      director: "estefan spielbergo",
-      stars: ["bobby bob","mary jean"],
       genre: ["action, adventure"],
       rtRating: "86",
       metaCritic: "70",
@@ -100,7 +93,8 @@ var placeholderData = [
       theater: "amc multiplex",
       time2Theater: 34,  //minutes to drive to theater
       miles2Theater: 5,  //miles to drive to theater
-      gMapsLink: "http://maps.google.com/"
+      gMapsLink: "http://maps.google.com/",
+      buyTixLink: "http://amc.com"
   }
 ];
 
@@ -190,7 +184,6 @@ module.exports = function (app) {
     }
   }
   function processing() {
-    maxRating = "PG";
     var filteredMovieList = [];
     movieList.forEach(movie => {
       if (maxRating === "N/A")
