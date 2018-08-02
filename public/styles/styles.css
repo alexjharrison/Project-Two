@@ -7,6 +7,10 @@ body {
   color: lightgrey;
   font-size: 18px;
   background-color: #222020;
+background: -moz-linear-gradient(top, #000000 0%, #222020 15%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #000000 0%,#222020 15%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #000000 0%,#222020 15%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#222020',GradientType=0 ); /* IE6-9 */
 }
 
 h1 {
@@ -45,11 +49,22 @@ header {
   justify-content: space-between;
   margin: auto;
 }
-
 header h1 {
   color: #ffc400;
   font-size: 2.2em;
-  margin: 10px;
+  margin: 10px auto 0;
+}
+
+.title-box {
+width: auto;
+}
+
+.tagline {
+  color: rgb(150, 150, 150);
+  font-style: italic;
+  margin-top: -10px;
+  padding-left: 70px;
+  white-space: nowrap;
 }
 
 .fp-container {
@@ -57,9 +72,12 @@ header h1 {
   margin: 0 auto;
   text-align: center;
 }
+.fp-container p {
+  margin: 5px;
+}
 
 .button-box {
-  color: grey;
+  color: rgb(150, 150, 150);
   font-size: .8em;
   display: flex;
   margin: 12px 12px 0;
@@ -93,9 +111,14 @@ a.pick-settings:hover{
   border-radius: 6px;
   overflow: hidden;
   position: relative;
+  -webkit-box-shadow: 0px 4px 15px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 4px 15px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 4px 15px 0px rgba(0,0,0,0.75);
+
 }
 
 .top-content .left {
+  width: 100%;
   max-width: 750px;
   display: flex;
   flex-wrap: wrap;
@@ -112,7 +135,7 @@ a.pick-settings:hover{
 
 .pick-showtime { 
   color: lightgray;
-  background-color: rgba(128, 128, 128, 0.2);
+  background-color: #313131;
   width: 100%;
   padding: 12px;
 }
@@ -143,6 +166,9 @@ a.pick-settings:hover{
 }
 
 .top-content .caption {
+  height: 100%;
+  text-align: left;
+  width: 100%;
   font-size: 17px;
   background-color: rgba(128, 128, 128, 0.2);
   padding: 5px 8px;
@@ -151,19 +177,37 @@ a.pick-settings:hover{
 .screen {
   width: 100%;
  height: 400px;
- padding-top: 56.25%;;
+ padding-top: 56.25%;
   background-color: #000;
-  background-image: url("../images/placeholder.jpg");
+  background-image: url("../images/loading.gif");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  position: relative;
+  position: absolute;
+  top:0;
+  z-index: -1;
 }
 
 .screen-wrapper {
+  position: relative;
   width: 100%;
   height: 400px;
   padding-bottom: 56.25%;
+}
+
+.no-match {
+  visibility: hidden;
+  color: #fff;
+  margin-top: 10px;
+  padding: 10px;
+  position: absolute;
+  bottom: 0;
+  z-index: 5;
+}
+
+.under-screen-wrapper {
+  width: 100%;
+  height: 100%;
 }
 
 #pick-title {
@@ -179,37 +223,53 @@ a.pick-settings:hover{
 
 .pick-genres {
   width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: flex-start;
   color: #000;
   font-size: 15px;
   font-style: italic;
   background-color: rgb(0, 77, 125);
-  padding: 5px 0;
   text-align: left;
   overflow: hidden;
 }
 .genre-tab {
+  font-weight: bold;
   background-color: rgb(0, 92, 148);
   padding: 5px 10px 5px 20px;
+  height: 100%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
 }
 #pick-genre-list {
   padding-left: 10px;
 }
 
-.pick-route {
-  text-align: right;
+#pick-route,
+#pick-tickets {
   font-style: italic;
   font-size: 1.2em;
-  padding: 5px 25px;
+  padding: 5px;
+  margin: auto;
 }
 
-.pick-route, .pick-route a,
+#pick-route, #pick-route a,
 div.card-action a {
   color: rgb(28, 187, 255);
 }
-.pick-route:hover, .pick-route a:hover,
+#pick-route:hover, #pick-route a:hover,
 div.card-action a:hover {
   color: rgb(116, 202, 255);
   text-shadow: 0px 0px 2px rgba(116, 202, 255, 1);
+}
+
+#pick-tickets, #pick-tickets a {
+  color: rgb(255, 136, 0);
+}
+#pick-tickets:hover, #pick-tickets a:hover {
+  color: rgb(252, 172, 24);
+  text-shadow: 0px 0px 2px rgba(252, 172, 24, 1);
 }
 
 #pick-rating {
@@ -260,6 +320,9 @@ div.card-action a:hover {
 margin-top: 20px;
 border-radius: 0 0 12px 12px;
 min-height: 100px;
+-webkit-box-shadow: 0px 4px 15px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 4px 15px 0px rgba(0,0,0,0.75);
+box-shadow: 0px 4px 15px 0px rgba(0,0,0,0.75);
 }
 
 .more .content {
@@ -268,6 +331,7 @@ min-height: 100px;
 
 footer {
   font-size: .8em;
+  padding-top: 10px;
   margin: 10px;
 }
 
@@ -281,6 +345,16 @@ footer {
 .card {
   color: #333;
   font-size: .8em;
+}
+
+.card-image {
+  background-image: url("../images/card-loading.gif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 22%;
+  padding-top: 60%;
 }
 
 .card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating) {
@@ -343,23 +417,58 @@ textarea.materialize-textarea:focus:not([readonly])+label {
   border-right-color: #a50000;
 }
 
+.range-field {
+  color: #a50000;
+}
+input[type=range]+.thumb,
+[type="radio"]:checked+span:after, 
+[type="radio"].with-gap:checked+span:after {
+  background-color: #a50000;
+}
+
+[type="radio"]:checked+span:after, 
+[type="radio"].with-gap:checked+span:before, 
+[type="radio"].with-gap:checked+span:after {
+  border-color: #a50000;
+}
+
 
 
 @media screen and (max-width: 600px) {
   header h1 {
     text-align: center;
     padding-left: 0;
-    margin: 10px;
   }
   header,
   .top-content {
     flex-wrap: wrap;
+  }
+  .top-content,
+  .more {
+    box-shadow: none;
+  }
+
+  .title-box {
+    text-align: center;
+    width: 100%;
+  }
+
+  .tagline {
+    text-align: center;
+    padding-left: 5px;
+    margin: -10px auto 0;
+    white-space: normal;
   }
   .button-box {
     margin: auto;
     text-align: center;
     width: 100%;
     justify-content: center;
+    align-items: center;
+  }
+
+  .button-box p {
+    margin: 0;
   }
 
   .top-content .right {
@@ -375,13 +484,9 @@ textarea.materialize-textarea:focus:not([readonly])+label {
   }
   .screen-wrapper {
     width: 100%;
-    padding-bottom: 75%;
-  }
-  .pick-genres {
-    padding: 5px 10px;
   }
   .genre-tab {
-    display: block;
+    padding: 5px 10px;
   }
   .top-content .caption {
     background-color: transparent;
