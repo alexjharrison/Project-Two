@@ -7,13 +7,13 @@ var fs = require("fs");
 
 var placeholderData = [
   {
-      title: "best movie name",
-      rating: "R",
-      genre: ["action, adventure"],
-      rtRating: "86",
-      metaCritic: "70",
-      posterImage: "https://m.media-amazon.com/images/M/MV5BMjAzOTM2OTAyNF5BMl5BanBnXkFtZTgwNTg5ODg1NTM@._V1_UX182_CR0,0,182,268_AL_.jpg",
-      description: "Some people do things",
+      title: "Christopher Robin",
+      rating: "PG",
+      genre: ["Animation, Adventure, Comedy "],
+      rtRating: "80",
+      metaCritic: "80",
+      posterImage: "https://m.media-amazon.com/images/M/MV5BMjAzOTM2OTAyNF5BMl5BanBnXkFtZTgwNTg5ODg1NTM@._V1_SX750.jpeg",
+      description: "A working-class family man, Christopher Robin, encounters his childhood friend Winnie-the-Pooh, who helps him to rediscover the joys of life.",
       showtime: "8:30pm",
       theater: "amc multiplex",
       time2Theater: 34,  //minutes to drive to theater
@@ -22,13 +22,13 @@ var placeholderData = [
       buyTixLink: "http://amc.com"
   },
   {
-      title: "second best movie name",
-      rating: "R",
-      genre: ["action, adventure"],
+      title: "Teen Titans Go! To the Movies",
+      rating: "PG",
+      genre: ["Animation, Action, Comedy"],
       rtRating: "86",
-      metaCritic: "70",
-      posterImage: "https://m.media-amazon.com/images/M/MV5BMjM3NDMwMDE2N15BMl5BanBnXkFtZTgwNDQ1Mjg5NTM@._V1_UY268_CR0,0,182,268_AL_.jpg",
-      description: "Some people do things",
+      metaCritic: "68",
+      posterImage: "https://m.media-amazon.com/images/M/MV5BMjM3NDMwMDE2N15BMl5BanBnXkFtZTgwNDQ1Mjg5NTM@._V1_SX750.jpg",
+      description: "A villain's maniacal plan for world domination sidetracks five teenage superheroes who dream of Hollywood stardom.",
       showtime: "8:30pm",
       theater: "amc multiplex",
       time2Theater: 34,  //minutes to drive to theater
@@ -37,13 +37,13 @@ var placeholderData = [
       buyTixLink: "http://amc.com"
   },
   {
-      title: "third best movie name",
-      rating: "R",
-      genre: ["action, adventure"],
-      rtRating: "86",
-      metaCritic: "70",
-      posterImage: "http://via.placeholder.com/300x475",
-      description: "Some people do things",
+      title: "The Incredibles 2",
+      rating: "PG",
+      genre: ["animation, action, adventure"],
+      rtRating: "81",
+      metaCritic: "80",
+      posterImage: "https://m.media-amazon.com/images/M/MV5BMTEzNzY0OTg0NTdeQTJeQWpwZ15BbWU4MDU3OTg3MjUz._V1_SX750.jpg",
+      description: "Bob Parr (Mr. Incredible) is left to care for the kids while Helen (Elastigirl) is out saving the world.",
       showtime: "8:30pm",
       theater: "amc multiplex",
       time2Theater: 34,  //minutes to drive to theater
@@ -52,13 +52,13 @@ var placeholderData = [
       buyTixLink: "http://amc.com"
   },
   {
-      title: "fourth best movie name",
-      rating: "R",
-      genre: ["action, adventure"],
+      title: "Mission Impossible: Fallout",
+      rating: "PG-13",
+      genre: ["Action, Adventure, Thriller"],
       rtRating: "86",
-      metaCritic: "70",
-      posterImage: "",
-      description: "Some people do things",
+      metaCritic: "84",
+      posterImage: "https://m.media-amazon.com/images/M/MV5BMTk3NDY5MTU0NV5BMl5BanBnXkFtZTgwNDI3MDE1NTM@._V1_SX750.jpg",
+      description: "Ethan Hunt and his IMF team, along with some familiar allies, race against time after a mission gone wrong.",
       showtime: "8:30pm",
       theater: "amc multiplex",
       time2Theater: 34,  //minutes to drive to theater
@@ -72,7 +72,7 @@ var placeholderData = [
       genre: ["action, adventure"],
       rtRating: "86",
       metaCritic: "70",
-      posterImage: "http://www.impawards.com/2018/posters/jurassic_world_fallen_kingdom_ver2.jpg",
+      posterImage: "https://m.media-amazon.com/images/M/MV5BMTk3NDY5MTU0NV5BMl5BanBnXkFtZTgwNDI3MDE1NTM@._V1_SX750.jpg",
       description: "Some people do things",
       showtime: "8:30pm",
       theater: "amc multiplex",
