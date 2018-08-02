@@ -7,6 +7,7 @@ var fs = require("fs");
 
 var placeholderData = [
   {
+<<<<<<< HEAD
     name: "best movie name",
     rating: "R",
     genre: ["action, adventure"],
@@ -80,6 +81,81 @@ var placeholderData = [
     miles2Theater: 5,  //miles to drive to theater
     gMapsLink: "http://maps.google.com/",
     buyTixLink: "http://amc.com"
+=======
+      title: "best movie name",
+      rating: "R",
+      genre: ["action, adventure"],
+      rtRating: "86",
+      metaCritic: "70",
+      posterImage: "https://m.media-amazon.com/images/M/MV5BMjAzOTM2OTAyNF5BMl5BanBnXkFtZTgwNTg5ODg1NTM@._V1_UX182_CR0,0,182,268_AL_.jpg",
+      description: "Some people do things",
+      showtime: "8:30pm",
+      theater: "amc multiplex",
+      time2Theater: 34,  //minutes to drive to theater
+      miles2Theater: 5,  //miles to drive to theater
+      gMapsLink: "http://maps.google.com/",
+      buyTixLink: "http://amc.com"
+  },
+  {
+      title: "second best movie name",
+      rating: "R",
+      genre: ["action, adventure"],
+      rtRating: "86",
+      metaCritic: "70",
+      posterImage: "https://m.media-amazon.com/images/M/MV5BMjM3NDMwMDE2N15BMl5BanBnXkFtZTgwNDQ1Mjg5NTM@._V1_UY268_CR0,0,182,268_AL_.jpg",
+      description: "Some people do things",
+      showtime: "8:30pm",
+      theater: "amc multiplex",
+      time2Theater: 34,  //minutes to drive to theater
+      miles2Theater: 5,  //miles to drive to theater
+      gMapsLink: "http://maps.google.com/",
+      buyTixLink: "http://amc.com"
+  },
+  {
+      title: "third best movie name",
+      rating: "R",
+      genre: ["action, adventure"],
+      rtRating: "86",
+      metaCritic: "70",
+      posterImage: "http://via.placeholder.com/300x475",
+      description: "Some people do things",
+      showtime: "8:30pm",
+      theater: "amc multiplex",
+      time2Theater: 34,  //minutes to drive to theater
+      miles2Theater: 5,  //miles to drive to theater
+      gMapsLink: "http://maps.google.com/",
+      buyTixLink: "http://amc.com"
+  },
+  {
+      title: "fourth best movie name",
+      rating: "R",
+      genre: ["action, adventure"],
+      rtRating: "86",
+      metaCritic: "70",
+      posterImage: "",
+      description: "Some people do things",
+      showtime: "8:30pm",
+      theater: "amc multiplex",
+      time2Theater: 34,  //minutes to drive to theater
+      miles2Theater: 5,  //miles to drive to theater
+      gMapsLink: "http://maps.google.com/",
+      buyTixLink: "http://amc.com"
+  },
+  {
+      name: "fifth best movie name",
+      rating: "R",
+      genre: ["action, adventure"],
+      rtRating: "86",
+      metaCritic: "70",
+      posterImage: "http://www.impawards.com/2018/posters/jurassic_world_fallen_kingdom_ver2.jpg",
+      description: "Some people do things",
+      showtime: "8:30pm",
+      theater: "amc multiplex",
+      time2Theater: 34,  //minutes to drive to theater
+      miles2Theater: 5,  //miles to drive to theater
+      gMapsLink: "http://maps.google.com/",
+      buyTixLink: "http://amc.com"
+>>>>>>> e7cfffffb6913deb1ca4fd8a9a1cc4e886e07703
   },
   {
     name: "sixth best movie name",
