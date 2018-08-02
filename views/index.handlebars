@@ -3,7 +3,8 @@
     <div class="left">
       <div class="screen-wrapper">
         <div class="no-match">
-          <h1>I'm sorry, we couldn't pick a flick that matches your settings. :(</h1></div>
+          <h1>I'm sorry, we couldn't pick a flick that matches your settings. :(</h1>
+        </div>
         <div class="screen">
           <div id="pick-title">Loading...</div>
           <div id="pick-rating"></div>
@@ -21,8 +22,6 @@
           </p>
         </div>
       </div>
-      {{!--
-      <div class="mobile-only">{{> change-settings}}</div> --}}
     </div>
     <div class="right">
       <div class="pick-showtime">
@@ -31,36 +30,40 @@
         at
         <div id="pick-place">a theater near you</div>
         <div id="pick-route">
-          <a herf="">
+          <a id="pick-route-link" herf="">
             <i class="fas fa-location-arrow"></i>
             Get route
           </a>
         </div>
         <span id="pick-tickets">
-          <a herf="">
+          <a id="pick-tickets-link" herf="">
             <i class="fas fa-ticket-alt"></i>
             Get tickets
           </a>
         </span>
       </div>
       <div class="pick-RT">
+        {{!--
         <div class="RT-logo">
-          <a href="https://rottentomatoes.com" target="-blank">
+          <a href="https://rottentomatoes.com" target="_blank">
             <img src="../images/RottenTomatoesLogo.png" style="width: 90%; padding: 8px">
           </a>
-        </div>
+        </div> --}}
         <div class="pick-critic-box">
+          <h3>Critic Score</h3>
           <div id="pick-critic-score">
             0%
           </div>
-          critic score
+
+          <span class="footnote">* from Rotten Tomatoes, Metacritic, or IMDB respectively.</span>
         </div>
+        {{!--
         <div class="pick-audience-box">
           <div id="pick-audience-score">
             0%
           </div>
           audience score
-        </div>
+        </div> --}}
       </div>
     </div>
 
@@ -78,6 +81,7 @@
         <div class="col s12 m6 l4">
           <div class="card" id="card1">
             <div id="op1-img" class="card-image">
+              <div id="op1-rating" class="card-rating">--</div>
             </div>
             <div class="card-content">
               <span id="op1-title" class="card-title">Loading...</span>
@@ -90,12 +94,17 @@
               <p>at
                 <span id="op1-place">a theater near you</span>
               </p>
-              <p>CRITIC RATING:
+              <p>CRITIC SCORE:
                 <span id="op1-critic-score">0%</span>
               </p>
-              <p>AUDIENCE RATING:
+              {{!--
+              <p>AUDIENCE SCORE:
                 <span id="op1-audience-score">0%</span>
-              </p>
+              </p> --}}
+              <div class="card-links">
+                <a id="op1-route" href="/">GET ROUTE</a>
+                <a id="op1-tix" href="/">GET TICKETS</a>
+              </div>
             </div>
           </div>
         </div>
@@ -103,7 +112,8 @@
         <!-- card2 -->
         <div class="col s12 m6 l4">
           <div class="card" id="card2">
-            <div class="card-image">
+            <div id="op2-img" class="card-image">
+              <div id="op2-rating" class="card-rating">--</div>
             </div>
             <div id="op2-img" class="card-content">
               <span id="op2-title" class="card-title">Loading...</span>
@@ -116,12 +126,17 @@
               <p>at
                 <span id="op2-place">a theater near you</span>
               </p>
-              <p>CRITIC RATING:
+              <p>CRITIC SCORE:
                 <span id="op2-critic-score">0%</span>
               </p>
-              <p>AUDIENCE RATING:
+              {{!--
+              <p>AUDIENCE SCORE:
                 <span id="op2-audience-score">0%</span>
-              </p>
+              </p> --}}
+              <div class="card-links">
+                <a id="op2-route" href="/">GET ROUTE</a>
+                <a id="op2-tix" href="/">GET TICKETS</a>
+              </div>
             </div>
           </div>
         </div>
@@ -130,6 +145,7 @@
         <div class="col s12 m6 l4">
           <div class="card" id="card3">
             <div id="op3-img" class="card-image">
+              <div id="op3-rating" class="card-rating">--</div>
             </div>
             <div class="card-content">
               <span id="op3-title" class="card-title">Loading...</span>
@@ -142,12 +158,17 @@
               <p>at
                 <span id="op3-place">a theater near you</span>
               </p>
-              <p>CRITIC RATING:
+              <p>CRITIC SCORE:
                 <span id="op3-critic-score">0%</span>
               </p>
-              <p>AUDIENCE RATING:
+              {{!--
+              <p>AUDIENCE SCORE:
                 <span id="op3-audience-score">0%</span>
-              </p>
+              </p> --}}
+              <div class="card-links">
+                <a id="op3-route" href="/">GET ROUTE</a>
+                <a id="op3-tix" href="/">GET TICKETS</a>
+              </div>
             </div>
           </div>
         </div>

@@ -19,16 +19,16 @@
                     </form>
                     <!-- ROTTEN TOMATOES SLIDER -->
                     <form action="#">
-                        <h5>Rotten Tomatoes Score (Minimum Percentage)</h5>
+                        <h5>Minimum Critic Score</h5>
                         <i class="material-icons prefix">theaters</i>
                         <p class="range-field">
-                            <input type="range" id="test5" min="0" max="100" />
+                            <input type="range" id="test5" min="0" max="100"/>
                         </p>
                     </form>
                     <!-- WAIT TIME SLIDER -->
                     <form action="#">
-                        <h5>Wait Time</h5>
-                        <i class="material-icons prefix">access_time</i>
+                        <h5>Max Distance (in miles)</h5>
+                        <i class="material-icons prefix">route</i>
                         <p class="range-field">
                             <input type="range" id="test5" min="0" max="100" />
                         </p>
@@ -64,11 +64,17 @@
                                             <span>R</span>
                                         </label>
                                     </p>
+                                    <p>
+                                        <label>
+                                            <input class="with-gap" id="select" name="group1" type="radio" />
+                                            <span>Any rating</span>
+                                        </label>
+                                    </p>
                                 </form>
                             </div>
                         </div>
                     </form>
-                    <form class="col s12">
+                    {{!-- <form class="col s12">
                         <div class="row">
                             <div class="input-field col s12" id="genre">
                                 <select multiple>
@@ -89,7 +95,7 @@
                             </div>
 
                         </div>
-                    </form>
+                    </form> --}}
 
                 </div>
             </div>
