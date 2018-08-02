@@ -21,11 +21,7 @@ $(() => {
         latitude = position.coords.latitude;
         longitude = position.coords.longitude;
     })
-<<<<<<< HEAD
-    setTimeout(post,3000);
-=======
     setTimeout(post, 3000);
->>>>>>> e7cfffffb6913deb1ca4fd8a9a1cc4e886e07703
     $("#submit").click(function (event) {
         event.preventDefault();
         post();
