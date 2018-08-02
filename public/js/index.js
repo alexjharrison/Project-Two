@@ -17,11 +17,11 @@ var latitude, longitude;
 
 
 $(() => {
-    navigator.geolocation.getCurrentPosition(position=>{
+    navigator.geolocation.getCurrentPosition(position => {
         latitude = position.coords.latitude;
         longitude = position.coords.longitude;
     })
-    setTimeout(post,1000);
+    setTimeout(post, 1000);
     $("#submit").click(function (event) {
         event.preventDefault();
         post();
@@ -29,7 +29,7 @@ $(() => {
 })
 
 function post() {
-    console.log(latitude,longitude);
+    console.log(latitude, longitude);
     console.log($("#icon_prefix").val())
     $.post("/", {
         location: $("#icon_prefix").val(),
@@ -41,8 +41,19 @@ function post() {
         latitude: latitude,
         longitude: longitude
     }, function (data, status) {
-        console.log(data, status);
+        console.log("This is data 0: "+ data[0], status);
+
+        // main pick
+        $("#pick-title").text(data[0].title);
+        $("#pick-rating")
+        $("#pick-genre-list")
+        $("#pick-synopsis")
+        $("#pick-time")
+        $("#pick-place")
+        $("#pick-critic-score")
+        $("#pick-audience-score")
     });
 
 }
+
 

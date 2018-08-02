@@ -9,8 +9,6 @@ var placeholderData = [
   {
       name: "best movie name",
       rating: "R",
-      director: "estefan spielbergo",
-      stars: ["bobby bob","mary jean"],
       genre: ["action, adventure"],
       rtRating: "86",
       metaCritic: "70",
@@ -25,8 +23,6 @@ var placeholderData = [
   {
       name: "second best movie name",
       rating: "R",
-      director: "estefan spielbergo",
-      stars: ["bobby bob","mary jean"],
       genre: ["action, adventure"],
       rtRating: "86",
       metaCritic: "70",
@@ -57,8 +53,6 @@ var placeholderData = [
   {
       name: "fourth best movie name",
       rating: "R",
-      director: "estefan spielbergo",
-      stars: ["bobby bob","mary jean"],
       genre: ["action, adventure"],
       rtRating: "86",
       metaCritic: "70",
@@ -73,8 +67,6 @@ var placeholderData = [
   {
       name: "fifth best movie name",
       rating: "R",
-      director: "estefan spielbergo",
-      stars: ["bobby bob","mary jean"],
       genre: ["action, adventure"],
       rtRating: "86",
       metaCritic: "70",
@@ -89,8 +81,6 @@ var placeholderData = [
   {
       name: "sixth best movie name",
       rating: "R",
-      director: "estefan spielbergo",
-      stars: ["bobby bob","mary jean"],
       genre: ["action, adventure"],
       rtRating: "86",
       metaCritic: "70",
