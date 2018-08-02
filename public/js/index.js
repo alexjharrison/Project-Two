@@ -14,9 +14,9 @@ RT url  https://stackoverflow.com/questions/179713/how-to-change-the-href-for-a-
 Route finder
 */
 var userSettings = {
-    location: "place", //fix later
-    maxDis: "25",
-    maxRating: "PG-13",
+    location: "", //fix later
+    maxDis: "10",
+    maxRating: "R",
     scoreMin: "75"
 }
 
