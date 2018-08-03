@@ -66,7 +66,7 @@ function post() {
         longitude: longitude
     }, function (data, status) {
         console.log(data);
-        console.log("This is data 0: "+ data[0].title, status);
+        console.log("This is data 0: " + data[0].title, status);
 
         // main pick
         $("#pick-title").text(data[0].title);
@@ -77,8 +77,8 @@ function post() {
         $("#pick-place").text(data[0].theater)
         $("#pick-critic-score").text(data[0].rtRating + "%")
         $("#pick-audience-score").text(data[0].metaCritic + "%")
-        $(".screen").css("background-image", "url("+ data[0].posterImage+")"); 
-        $("#pick-route-link").attr("href", data[0].gMapsLink);  
+        $(".screen").css("background-image", "url(" + data[0].posterImage + ")");
+        $("#pick-route-link").attr("href", data[0].gMapsLink);
         $("#pick-tickets-link").attr("href", data[0].buyTixLink);
 
         // card 1
@@ -90,8 +90,8 @@ function post() {
         $("#op1-place").text(data[1].theater)
         $("#op1-critic-score").text(data[1].rtRating + "%")
         $("#op1-audience-score").text(data[1].metaCritic + "%")
-        $("#op1-img").css("background-image", "url("+ data[1].posterImage+")"); 
-        $("#op1-route").attr("href", data[1].gMapsLink);  
+        $("#op1-img").css("background-image", "url(" + data[1].posterImage + ")");
+        $("#op1-route").attr("href", data[1].gMapsLink);
         $("#op1-tix").attr("href", data[1].buyTixLink);
 
         // card 2
@@ -103,8 +103,8 @@ function post() {
         $("#op2-place").text(data[2].theater)
         $("#op2-critic-score").text(data[2].rtRating + "%")
         $("#op2-audience-score").text(data[2].metaCritic + "%")
-        $("#op2-img").css("background-image", "url("+ data[2].posterImage+")"); 
-        $("#op2-route").attr("href", data[2].gMapsLink);  
+        $("#op2-img").css("background-image", "url(" + data[2].posterImage + ")");
+        $("#op2-route").attr("href", data[2].gMapsLink);
         $("#op2-tix").attr("href", data[2].buyTixLink);
 
         // card 3
@@ -116,11 +116,10 @@ function post() {
         $("#op3-place").text(data[3].theater)
         $("#op3-critic-score").text(data[3].rtRating + "%")
         $("#op3-audience-score").text(data[3].metaCritic + "%")
-        $("#op3-img").css("background-image", "url("+ data[3].posterImage+")"); 
-        $("#op3-route").attr("href", data[3].gMapsLink);  
+        $("#op3-img").css("background-image", "url(" + data[3].posterImage + ")");
+        $("#op3-route").attr("href", data[3].gMapsLink);
         $("#op3-tix").attr("href", data[3].buyTixLink);
-    });
-
+    })
 }
 
 
