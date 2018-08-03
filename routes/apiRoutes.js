@@ -197,10 +197,6 @@ module.exports = function (app) {
         if (movie.rating !== "N/A" && movie.rating !== "R")
           filteredMovieList.push(movie);
       }
-      else if (maxRating === "PG-13") {
-        if (movie.rating === "PG-13" || movie.rating === "PG" || movie.rating === "G")
-          filteredMovieList.push(movie);
-      }
       else if (maxRating === "PG") {
         if (movie.rating === "PG" || movie.rating === "G")
           filteredMovieList.push(movie);
@@ -272,7 +268,8 @@ module.exports = function (app) {
     }, function (err, res, maps) {
       if (err) throw err;
       console.log(maps);
-      timeText[counter] = (JSON.parse(maps).rows[0].elements[0].duration.text);
+      if(JSON.parse(maps).rows[0].elements[0].status==="OK")
+        timeText[counter] = (JSON.parse(maps).rows[0].elements[0].duration.text);
       counter++;
       if (counter === numTheaters) {
         timeMath(theaters, timeText)
