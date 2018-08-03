@@ -367,8 +367,15 @@ module.exports = function (app) {
 
   function geocoderer(location) {
     geocoder.geocode(location, (err, data) => {
-      console.log(data);
-      if (data.results === [] || err) {
+      if (err) {
+        geocoder(location);
+        return;
+      }
+      else if (data.results === []) {
+        geocoderer(location);
+        return;
+      }
+      else if(!data.results[0]){
         geocoderer(location);
         return;
       }

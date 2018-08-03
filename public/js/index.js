@@ -22,12 +22,13 @@ var userSettings = {
 
 var latitude, longitude;
 
-
 $(() => {
-    navigator.geolocation.getCurrentPosition(position => {
-        latitude = position.coords.latitude;
-        longitude = position.coords.longitude;
-    })
+    // navigator.geolocation.getCurrentPosition(position => {
+    //     latitude = position.coords.latitude;
+    //     longitude = position.coords.longitude;
+    // })
+    latitude = 40.532173;
+    longitude = -74.521610;
     setTimeout(post, 3000);
     $("#submit").click(function (event) {
         event.preventDefault();
