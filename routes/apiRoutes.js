@@ -271,8 +271,8 @@ module.exports = function (app) {
     }, function (err, res, maps) {
       if (err) throw err;
       console.log(maps);
-      if(JSON.parse(maps).rows[0].elements[0].status==="OK")
-        timeText[counter] = (JSON.parse(maps).rows[0].elements[0].duration.text);
+      // if(JSON.parse(maps).rows[0].elements[0].status==="OK")
+      //   timeText[counter] = (JSON.parse(maps).rows[0].elements[0].duration.text);
       counter++;
       if (counter === numTheaters) {
         timeMath(theaters, timeText)
@@ -280,10 +280,10 @@ module.exports = function (app) {
     });
   }
   function timeMath(theaters, timeText) {
-    timeText = timeText.map(time => parseFloat(time.replace(" mins", "")));
+    // timeText = timeText.map(time => parseFloat(time.replace(" mins", "")));
     //this is where the madness lives
     ////////////////////////////////////////////////////////////////
-    var nowAfterDrive = timeText.map(adjustment => moment().add(adjustment, "minutes").format());
+    // var nowAfterDrive = timeText.map(adjustment => moment().add(adjustment, "minutes").format());
 
     var eachMovieName = filterediShowtimesData.map(showtime => showtime.movie_name);
     var eachCinema = filterediShowtimesData.map(showtime => showtime.cinema_name);
