@@ -128,6 +128,7 @@ module.exports = function (app) {
       headers: { 'X-API-Key': process.env.ISHOWTIMES_KEY }
     }, function (err, res, body) {
       if (err) throw err;
+      console.log(body);
       var showtimes = JSON.parse(body).showtimes;
       var movies = JSON.parse(body).movies;
       var cinemas = JSON.parse(body).cinemas;
@@ -170,7 +171,9 @@ module.exports = function (app) {
       }, function (err, res, omdbBody) {
         if (err) console.log(err.message);
         omdbBody = JSON.parse(omdbBody);
+        console.log(omdbBody)
         counter++;
+        // if(omdbBody.Response==)
         movieList[i].rating = omdbBody.Rated;
         if (omdbBody.Genre) movieList[i].genres = omdbBody.Genre.split(", ");
         else movieList[i].genres = [];
